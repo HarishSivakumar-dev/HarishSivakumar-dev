@@ -1,43 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 560" width="100%" height="auto">
   <defs>
     <style>
-      .bg { fill: #0c0c0c; }
-      .header-bg { fill: #1f1f1f; }
-      .title-text { fill: #cccccc; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: 400; }
-      .cmd-text { fill: #cccccc; font-family: 'Consolas', 'Cascadia Code', monospace; font-size: 13.5px; line-height: 1.45; }
-      .prompt { fill: #ffffff; font-weight: bold; }
-      .key { fill: #98c379; font-weight: 600; }
-      .val { fill: #61afef; }
-      .string { fill: #e5c07b; }
-      .comment { fill: #5c6370; font-style: italic; }
-      .cursor { fill: #cccccc; }
+      .bg { fill: #1e1e1e; }
+      .header-bg { fill: #2d2d2d; }
+      .title-text { fill: #b5b5b5; font-family: '-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', 'Segoe UI', sans-serif; font-size: 13px; font-weight: 500; }
+      .cmd-text { fill: #d4d4d4; font-family: 'Menlo', 'Monaco', 'Courier New', monospace; font-size: 13.5px; line-height: 1.45; }
+      .prompt { fill: #35d499; font-weight: bold; }
+      .path { fill: #569cd6; font-weight: bold; }
+      .key { fill: #9cdcfe; font-weight: 600; }
+      .val { fill: #ce9178; }
+      .string { fill: #d7ba7d; }
+      .comment { fill: #6a9955; font-style: italic; }
+      .cursor { fill: #aeafad; }
     </style>
     <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <rect x="5" y="5" width="840" height="550" rx="8" ry="8" class="header-bg" filter="url(#shadow2)" stroke="#333333" stroke-width="1" />
-  <rect x="5" y="5" width="840" height="36" rx="8" ry="8" class="header-bg" />
-  <line x1="5" y1="41" x2="845" y2="41" stroke="#2b2b2b" stroke-width="1" />
+  <rect x="5" y="5" width="840" height="550" rx="10" ry="10" class="header-bg" filter="url(#shadow2)" stroke="#3c3c3c" stroke-width="1" />
+  <rect x="5" y="5" width="840" height="38" rx="10" ry="10" class="header-bg" />
+  <line x1="5" y1="43" x2="845" y2="43" stroke="#252526" stroke-width="1" />
 
-  <g transform="translate(20, 15)">
-    <rect x="0" y="0" width="14" height="14" fill="#000000" rx="2" stroke="#666" stroke-width="1"/>
-    <text x="2" y="10" fill="#ffffff" font-family="Consolas" font-size="10" font-weight="bold">&gt;_</text>
-  </g>
-  <text x="44" y="27" class="title-text">Command Prompt - type %USERPROFILE%\config\backend_stack.yaml</text>
+  <circle cx="24" cy="24" r="6" fill="#ff5f56" stroke="#e0443e" stroke-width="0.5"/>
+  <circle cx="44" cy="24" r="6" fill="#ffbd2e" stroke="#dea123" stroke-width="0.5"/>
+  <circle cx="64" cy="24" r="6" fill="#27c93f" stroke="#1aab29" stroke-width="0.5"/>
 
-  <g transform="translate(740, 10)">
-    <line x1="10" y1="14" x2="20" y2="14" stroke="#cccccc" stroke-width="1" />
-    <rect x="42" y="7" width="10" height="10" stroke="#cccccc" stroke-width="1" fill="transparent" />
-    <line x1="75" y1="7" x2="87" y2="17" stroke="#cccccc" stroke-width="1.2" />
-    <line x1="87" y1="7" x2="75" y2="17" stroke="#cccccc" stroke-width="1.2" />
-  </g>
+  <text x="425" y="28" text-anchor="middle" class="title-text">harish — cat backend_stack.yaml — 80×28</text>
 
-  <rect x="5" y="42" width="840" height="512" class="bg" />
+  <rect x="5" y="44" width="840" height="510" rx="0" ry="0" class="bg" />
 
-  <g transform="translate(20, 70)" class="cmd-text">
-    <text x="0" y="0"><tspan class="prompt">C:\Users\HarishSivakumar&gt;</tspan> type %USERPROFILE%\config\backend_stack.yaml</text>
+  <g transform="translate(24, 72)" class="cmd-text">
+    <text x="0" y="0"><tspan class="prompt">harish@macbook-pro</tspan> <tspan class="path">~</tspan> % cat ~/.config/backend_stack.yaml</text>
 
     <!-- Core Runtime -->
     <text x="0" y="30" class="comment"># Core Engineering Frameworks</text>
@@ -65,6 +59,6 @@
     <text x="0" y="395"><tspan class="key">security_auth:</tspan> <tspan class="string">[OAuth2, JWT, Role-Based Access Control (RBAC)]</tspan></text>
     <text x="0" y="415"><tspan class="key">devops_cloud:</tspan> <tspan class="string">[Docker, Docker Compose, AWS EC2, Nginx, Git, GitHub]</tspan></text>
 
-    <text x="0" y="460"><tspan class="prompt">C:\Users\HarishSivakumar&gt;</tspan> <tspan class="cursor">█</tspan></text>
+    <text x="0" y="460"><tspan class="prompt">harish@macbook-pro</tspan> <tspan class="path">~</tspan> % <tspan class="cursor">█</tspan></text>
   </g>
 </svg>
