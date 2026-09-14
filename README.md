@@ -1,91 +1,18 @@
 <div align="center">
-  <img src="./assets/cmd_terminal.svg" alt="Command Prompt Terminal Window" width="100%" />
+
+  <!-- 01 Header Terminal Card -->
+  <img src="./assets/01_header_terminal.svg" alt="Command Prompt System Overview" width="100%" />
+
+  <br /><br />
+
+  <!-- 02 Technical Stack Terminal Card -->
+  <img src="./assets/02_stack_terminal.svg" alt="Command Prompt Backend Stack" width="100%" />
+
 </div>
 
 <br />
 
-```cmd
-C:\Users\HarishSivakumar> type %USERPROFILE%\system_spec.yaml
-```
-```yaml
-OS         : Windows / Linux
-Runtime    : Java (17+) / Spring Boot 3.x
-Services   : Microservices, Event Streaming, RAG Pipelines
-Databases  : PostgreSQL (pgvector), MySQL, Redis
-Infra      : Docker, AWS EC2, Nginx, Kafka
-Security   : OAuth2, JWT, Spring Security
-```
-
----
-
-### `01. Technical Stack & Services`
-
-```cmd
-C:\Users\HarishSivakumar> type %USERPROFILE%\config\backend_stack.yaml
-```
-```yaml
-# Core Engineering Frameworks
-runtime_environment:
-  language: Java
-  core_frameworks:
-    - Spring Boot
-    - Spring Security
-    - Spring Data JPA
-    - Hibernate
-  architecture:
-    - REST APIs
-    - Microservices
-    - Spring Cloud
-    - Eureka (Service Discovery)
-    - OpenFeign
-
-# Messaging & In-Memory Storage
-event_and_cache:
-  message_broker: Apache Kafka
-  in_memory_db: Redis
-  realtime: WebSockets (STOMP)
-
-# Persistence & Vector Search
-database_infrastructure:
-  relational:
-    - MySQL
-    - PostgreSQL
-  vector_search:
-    - pgvector
-    - Vector Databases
-    - Embeddings
-```
-
----
-
-### `02. AI & Distributed Systems Integration`
-
-```cmd
-C:\Users\HarishSivakumar> type %USERPROFILE%\config\ai_and_security.yaml
-```
-```yaml
-ai_engineering:
-  framework: Spring AI
-  llm_integration: Google Gemini
-  patterns:
-    - Retrieval-Augmented Generation (RAG)
-    - Vector Search Indexing
-    - Semantic Search
-
-security_and_devops:
-  authentication: OAuth2 | JWT
-  containerization: Docker | Docker Compose
-  cloud_and_web: AWS EC2 | Nginx
-  version_control: Git | GitHub
-```
-
----
-
-### `03. Visual Stack & Badges`
-
-```cmd
-C:\Users\HarishSivakumar> dir /b %USERPROFILE%\technologies
-```
+### `> VISUAL TECH TOOLKIT`
 
 #### Languages & Core Frameworks
 <p align="left">
@@ -123,49 +50,19 @@ C:\Users\HarishSivakumar> dir /b %USERPROFILE%\technologies
   <img src="https://img.shields.io/badge/GitHub-1e1e2e?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 </p>
 
----
-
-### `04. Computer Science Fundamentals`
-
-| Domain | Topics & Focus Areas |
-| :--- | :--- |
-| **Core** | Data Structures & Algorithms (DSA) |
-| **Data Structures** | Trees · Graphs · Hash Tables |
-| **Algorithmic Patterns** | DFS / BFS · Sliding Window · Recursion & Backtracking |
-
----
-
-### `05. Active Services`
-
-```cmd
-C:\Users\HarishSivakumar> tasklist /FI "STATUS eq RUNNING" /FO TABLE
-
-Image Name                   PID Session Name        Mem Usage  Description
-======================== ======== ================ ============ ===================================
-java.exe                    10420 Console             412,852 K  Spring Boot / Microservices Core
-kafka_server.exe             8912 Console             310,120 K  Apache Kafka Message Broker
-redis-server.exe             4508 Console              48,200 K  Redis In-Memory Cache
-postgres.exe                 6124 Console             185,400 K  PostgreSQL + pgvector Engine
-docker.exe                  12048 Console             890,110 K  Docker Desktop Containers
-```
-
----
-
-### `06. Endpoint / Contact`
-
-```cmd
-C:\Users\HarishSivakumar> curl.exe -s -X GET "https://api.harish.dev/v1/contact"
-```
-
-```json
-{
-  "github": "https://github.com/HarishSivakumar-Dev",
-  "linkedin": "https://linkedin.com/in/YOUR_LINKEDIN",
-  "email": "your.email@domain.com",
-  "status": "200 OK"
-}
-```
+<br />
 
 <div align="center">
+
+  <!-- 03 CS & Tasklist Card -->
+  <img src="./assets/03_cs_and_processes.svg" alt="Command Prompt CS Core & Processes" width="100%" />
+
+  <br /><br />
+
+  <!-- 04 Contact Card -->
+  <img src="./assets/04_contact_terminal.svg" alt="Command Prompt Contact API" width="100%" />
+
+  <br /><br />
   <sub>Built with terminal precision · Harish Sivakumar</sub>
+
 </div>

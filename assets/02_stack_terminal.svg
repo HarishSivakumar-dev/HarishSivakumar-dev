@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 560" width="100%" height="auto">
+  <defs>
+    <style>
+      .bg { fill: #0c0c0c; }
+      .header-bg { fill: #1f1f1f; }
+      .title-text { fill: #cccccc; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: 400; }
+      .cmd-text { fill: #cccccc; font-family: 'Consolas', 'Cascadia Code', monospace; font-size: 13.5px; line-height: 1.45; }
+      .prompt { fill: #ffffff; font-weight: bold; }
+      .key { fill: #98c379; font-weight: 600; }
+      .val { fill: #61afef; }
+      .string { fill: #e5c07b; }
+      .comment { fill: #5c6370; font-style: italic; }
+      .cursor { fill: #cccccc; }
+    </style>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect x="5" y="5" width="840" height="550" rx="8" ry="8" class="header-bg" filter="url(#shadow2)" stroke="#333333" stroke-width="1" />
+  <rect x="5" y="5" width="840" height="36" rx="8" ry="8" class="header-bg" />
+  <line x1="5" y1="41" x2="845" y2="41" stroke="#2b2b2b" stroke-width="1" />
+
+  <g transform="translate(20, 15)">
+    <rect x="0" y="0" width="14" height="14" fill="#000000" rx="2" stroke="#666" stroke-width="1"/>
+    <text x="2" y="10" fill="#ffffff" font-family="Consolas" font-size="10" font-weight="bold">&gt;_</text>
+  </g>
+  <text x="44" y="27" class="title-text">Command Prompt - type %USERPROFILE%\config\backend_stack.yaml</text>
+
+  <g transform="translate(740, 10)">
+    <line x1="10" y1="14" x2="20" y2="14" stroke="#cccccc" stroke-width="1" />
+    <rect x="42" y="7" width="10" height="10" stroke="#cccccc" stroke-width="1" fill="transparent" />
+    <line x1="75" y1="7" x2="87" y2="17" stroke="#cccccc" stroke-width="1.2" />
+    <line x1="87" y1="7" x2="75" y2="17" stroke="#cccccc" stroke-width="1.2" />
+  </g>
+
+  <rect x="5" y="42" width="840" height="512" class="bg" />
+
+  <g transform="translate(20, 70)" class="cmd-text">
+    <text x="0" y="0"><tspan class="prompt">C:\Users\HarishSivakumar&gt;</tspan> type %USERPROFILE%\config\backend_stack.yaml</text>
+
+    <!-- Core Runtime -->
+    <text x="0" y="30" class="comment"># Core Engineering Frameworks</text>
+    <text x="0" y="50"><tspan class="key">runtime_environment:</tspan></text>
+    <text x="20" y="70"><tspan class="key">language:</tspan> <tspan class="val">Java (17 / 21)</tspan></text>
+    <text x="20" y="90"><tspan class="key">core_frameworks:</tspan> <tspan class="string">[Spring Boot, Spring Security, Spring Data JPA, Hibernate]</tspan></text>
+    <text x="20" y="110"><tspan class="key">architecture:</tspan> <tspan class="string">[REST APIs, Microservices, Spring Cloud, Eureka, OpenFeign]</tspan></text>
+
+    <!-- Messaging & Cache -->
+    <text x="0" y="145" class="comment"># Distributed Messaging &amp; In-Memory Storage</text>
+    <text x="0" y="165"><tspan class="key">event_and_cache:</tspan></text>
+    <text x="20" y="185"><tspan class="key">message_broker:</tspan> <tspan class="val">Apache Kafka (Event-Driven Architecture)</tspan></text>
+    <text x="20" y="205"><tspan class="key">in_memory_db:</tspan> <tspan class="val">Redis (Caching, Pub/Sub, Session Management)</tspan></text>
+    <text x="20" y="225"><tspan class="key">realtime_communication:</tspan> <tspan class="val">WebSockets (STOMP Protocol)</tspan></text>
+
+    <!-- Databases & Vector -->
+    <text x="0" y="260" class="comment"># Persistence &amp; Vector Databases</text>
+    <text x="0" y="280"><tspan class="key">database_infrastructure:</tspan></text>
+    <text x="20" y="300"><tspan class="key">relational:</tspan> <tspan class="string">[MySQL, PostgreSQL]</tspan></text>
+    <text x="20" y="320"><tspan class="key">vector_search:</tspan> <tspan class="string">[pgvector, Vector Databases, Embeddings]</tspan></text>
+
+    <!-- AI & DevOps -->
+    <text x="0" y="355" class="comment"># AI Integration, Security &amp; Infrastructure</text>
+    <text x="0" y="375"><tspan class="key">ai_engineering:</tspan> <tspan class="string">[Spring AI, Google Gemini, RAG Pipelines, Semantic Search]</tspan></text>
+    <text x="0" y="395"><tspan class="key">security_auth:</tspan> <tspan class="string">[OAuth2, JWT, Role-Based Access Control (RBAC)]</tspan></text>
+    <text x="0" y="415"><tspan class="key">devops_cloud:</tspan> <tspan class="string">[Docker, Docker Compose, AWS EC2, Nginx, Git, GitHub]</tspan></text>
+
+    <text x="0" y="460"><tspan class="prompt">C:\Users\HarishSivakumar&gt;</tspan> <tspan class="cursor">█</tspan></text>
+  </g>
+</svg>
