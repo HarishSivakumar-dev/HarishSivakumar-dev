@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 220" width="100%" height="220" style="background:transparent;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="280" style="background:transparent;">
   <defs>
     <style>
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
       @keyframes pulse-green {
-        0%, 100% { fill: #3fb950; opacity: 1; filter: drop-shadow(0 0 3px #3fb950); }
+        0%, 100% { fill: #3fb950; opacity: 1; filter: drop-shadow(0 0 4px #3fb950); }
         50% { fill: #2ea043; opacity: 0.4; filter: drop-shadow(0 0 1px #2ea043); }
       }
       @keyframes flow-line {
@@ -11,14 +12,20 @@
       }
       @keyframes node-ping {
         0% { r: 3px; opacity: 1; }
-        100% { r: 12px; opacity: 0; }
+        100% { r: 14px; opacity: 0; }
       }
-      .t-title { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 12px; font-weight: bold; fill: #8b949e; }
-      .hero-name { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 32px; font-weight: 900; fill: #ffffff; letter-spacing: 2px; }
-      .hero-role { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 15px; font-weight: 700; fill: #3fb950; letter-spacing: 1.5px; }
-      .hero-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; fill: #8b949e; }
-      .t-status { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 11.5px; fill: #3fb950; font-weight: bold; }
+
+      .term-title { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 13px; font-weight: 600; fill: #8b949e; }
+      .prompt-user { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 13px; font-weight: 700; fill: #3fb950; }
+      .prompt-path { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 13px; font-weight: 700; fill: #58a6ff; }
+      .prompt-cmd  { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 13px; fill: #c9d1d9; }
       
+      .hero-ascii  { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 11px; fill: #3fb950; font-weight: bold; white-space: pre; }
+      .hero-name   { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 26px; font-weight: 900; fill: #ffffff; letter-spacing: 2px; }
+      .hero-role   { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 14px; font-weight: 700; fill: #58a6ff; letter-spacing: 1px; }
+      .hero-sub    { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 12px; fill: #8b949e; }
+      
+      .cursor { fill: #3fb950; animation: blink 1s step-start infinite; }
       .data-flow { stroke: #3fb950; stroke-width: 1.5; stroke-dasharray: 6, 6; animation: flow-line 1.2s linear infinite; }
       .node-pulse { fill: none; stroke: #3fb950; stroke-width: 1.5; animation: node-ping 2s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
       .status-dot { animation: pulse-green 2s infinite; }
@@ -26,45 +33,53 @@
   </defs>
 
   <!-- Dark Outer Window Container -->
-  <rect width="850" height="220" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1.5"/>
+  <rect width="900" height="280" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
 
   <!-- Window Header Bar -->
-  <path d="M 0,8 A 8,8 0 0,1 8,0 L 842,0 A 8,8 0 0,1 850,8 L 850,34 L 0,34 Z" fill="#161b22"/>
-  <line x1="0" y1="34" x2="850" y2="34" stroke="#21262d" stroke-width="1"/>
+  <path d="M 0,8 A 8,8 0 0,1 8,0 L 892,0 A 8,8 0 0,1 900,8 L 900,36 L 0,36 Z" fill="#161b22"/>
+  <line x1="0" y1="36" x2="900" y2="36" stroke="#30363d" stroke-width="1"/>
   
   <!-- Mac Window Buttons -->
-  <circle cx="20" cy="17" r="5" fill="#ff5f56"/>
-  <circle cx="36" cy="17" r="5" fill="#ffbd2e"/>
-  <circle cx="52" cy="17" r="5" fill="#27c93f"/>
+  <circle cx="22" cy="18" r="5.5" fill="#ff5f56"/>
+  <circle cx="38" cy="18" r="5.5" fill="#ffbd2e"/>
+  <circle cx="54" cy="18" r="5.5" fill="#27c93f"/>
 
   <!-- Window Title -->
-  <text x="425" y="21" class="t-title" text-anchor="middle">harish@platform-node-01:~ (zsh)</text>
+  <text x="450" y="22" class="term-title" text-anchor="middle">harish@platform-node-01: ~ (zsh)</text>
 
-  <!-- Left Branding & Text Content -->
-  <g transform="translate(35, 72)">
-    <text x="0" y="0" class="hero-name">HARISH SIVAKUMAR</text>
-    <text x="0" y="28" class="hero-role">❯ JAVA BACKEND &amp; PLATFORM ENGINEER</text>
-    <text x="0" y="54" class="hero-sub">Distributed Systems Architecture • Microservices • Cloud &amp; AI / RAG Platforms</text>
+  <!-- Command Line Prompt 1 -->
+  <g transform="translate(30, 62)">
+    <text class="prompt-user">harish@platform-node-01</text>
+    <text x="210" class="prompt-cmd">:<text class="prompt-path">~</text>$ init_backend_profile.sh --mode=production</text>
   </g>
 
-  <!-- Interactive Network Diagram Graphic (Right Side) -->
-  <g transform="translate(560, 50)">
-    <!-- Connection Lines -->
-    <line x1="30" y1="50" x2="110" y2="50" class="data-flow"/>
-    <line x1="110" y1="50" x2="180" y2="25" class="data-flow"/>
-    <line x1="110" y1="50" x2="180" y2="75" class="data-flow"/>
-    <line x1="180" y1="25" x2="240" y2="50" stroke="#30363d" stroke-width="1.5"/>
-    <line x1="180" y1="75" x2="240" y2="50" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Left Main Information Block -->
+  <g transform="translate(30, 95)">
+    <text x="0" y="22" class="hero-name">HARISH SIVAKUMAR</text>
+    <text x="0" y="48" class="hero-role">❯ JAVA BACKEND &amp; PLATFORM ENGINEER</text>
+    <text x="0" y="74" class="hero-sub">[+] 3rd-Year ECE Student @ VIT Chennai</text>
+    <text x="0" y="94" class="hero-sub">[+] Focus: Distributed Systems • Microservices • AI/RAG • DevOps</text>
+    <text x="0" y="114" class="hero-sub">[+] Tech: Java 21, Spring Boot 3, Kafka, Redis, PostgreSQL, pgvector</text>
+  </g>
+
+  <!-- Interactive Network Topology Graphic (Right Side) -->
+  <g transform="translate(580, 75)">
+    <!-- Node Connection Lines -->
+    <line x1="30" y1="65" x2="105" y2="65" class="data-flow"/>
+    <line x1="105" y1="65" x2="175" y2="35" class="data-flow"/>
+    <line x1="105" y1="65" x2="175" y2="95" class="data-flow"/>
+    <line x1="175" y1="35" x2="245" y2="65" stroke="#30363d" stroke-width="1.5"/>
+    <line x1="175" y1="95" x2="245" y2="65" stroke="#30363d" stroke-width="1.5"/>
 
     <!-- Client Node -->
-    <g transform="translate(30, 50)">
+    <g transform="translate(30, 65)">
       <circle r="14" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
       <circle r="4" fill="#79c0ff"/>
-      <text x="0" y="26" font-family="monospace" font-size="10" fill="#8b949e" text-anchor="middle">CLIENT</text>
+      <text x="0" y="28" font-family="monospace" font-size="10" fill="#8b949e" text-anchor="middle">CLIENT</text>
     </g>
 
     <!-- API Gateway Node -->
-    <g transform="translate(110, 50)">
+    <g transform="translate(105, 65)">
       <rect x="-18" y="-18" width="36" height="36" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
       <circle r="16" class="node-pulse"/>
       <text x="0" y="4" font-family="monospace" font-size="11" font-weight="bold" fill="#3fb950" text-anchor="middle">GW</text>
@@ -72,31 +87,34 @@
     </g>
 
     <!-- Service Node A -->
-    <g transform="translate(180, 25)">
+    <g transform="translate(175, 35)">
       <circle r="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
       <circle r="4" fill="#3fb950"/>
       <text x="20" y="4" font-family="monospace" font-size="9" fill="#8b949e">AUTH/JWT</text>
     </g>
 
     <!-- Service Node B -->
-    <g transform="translate(180, 75)">
+    <g transform="translate(175, 95)">
       <circle r="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
       <circle r="4" fill="#3fb950"/>
       <text x="20" y="4" font-family="monospace" font-size="9" fill="#8b949e">SERVICES</text>
     </g>
 
     <!-- Cache/Queue Node -->
-    <g transform="translate(240, 50)">
+    <g transform="translate(245, 65)">
       <circle r="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
       <circle r="4" fill="#d2a8ff"/>
-      <text x="0" y="24" font-family="monospace" font-size="9" fill="#8b949e" text-anchor="middle">KAFKA/REDIS</text>
+      <text x="0" y="26" font-family="monospace" font-size="9" fill="#8b949e" text-anchor="middle">KAFKA/REDIS</text>
     </g>
   </g>
 
-  <!-- Bottom System Status Bar -->
-  <g transform="translate(35, 185)">
-    <circle cx="6" cy="0" r="4" fill="#3fb950" class="status-dot"/>
-    <text x="18" y="4" class="t-status">SYSTEM ONLINE • 99.99% UPTIME</text>
-    <text x="630" y="4" font-family="monospace" font-size="11" fill="#484f58">ECE '26 | JAVA / SPRING BOOT 3</text>
+  <!-- Bottom Terminal Command & Status Line -->
+  <g transform="translate(30, 248)">
+    <text class="prompt-user">harish@platform-node-01</text>
+    <text x="210" class="prompt-cmd">:<text class="prompt-path">~</text>$ status_check --all</text>
+    <rect x="382" y="-12" width="9" height="15" class="cursor"/>
+    
+    <circle cx="700" cy="-4" r="4.5" fill="#3fb950" class="status-dot"/>
+    <text x="712" y="0" font-family="monospace" font-size="11" font-weight="bold" fill="#3fb950">NODE_ONLINE [99.99%]</text>
   </g>
 </svg>
