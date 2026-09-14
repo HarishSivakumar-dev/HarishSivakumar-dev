@@ -47,7 +47,7 @@
 
 <div align="center">
   <table width="100%">
-    <!-- ROW 1: Core Backend & Infrastructure -->
+    <!-- ROW 1: Core Web & Languages -->
     <tr>
       <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=java" width="40px"/><br>Java</td>
       <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=spring" width="40px"/><br>Spring</td>
@@ -60,7 +60,7 @@
       <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=nginx" width="40px"/><br>Nginx</td>
       <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=git" width="40px"/><br>Git</td>
     </tr>
-    <!-- ROW 2: Build Tools, Languages & Tools -->
+    <!-- ROW 2: Tools & AI -->
     <tr>
       <td align="center"><img src="https://skillicons.dev/icons?i=maven" width="40px"/><br>Maven</td>
       <td align="center"><img src="https://skillicons.dev/icons?i=cpp" width="40px"/><br>C++</td>
@@ -75,3 +75,11 @@
     </tr>
   </table>
 </div>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="output/github-contribution-grid-snake.svg">
+</picture>
