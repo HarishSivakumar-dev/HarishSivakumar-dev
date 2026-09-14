@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 280" width="100%" height="280" style="background:transparent;">
+  <defs>
+    <style>
+      .t-title { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13px; font-weight: bold; fill: #8b949e; }
+      .t-prompt { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13.5px; font-weight: bold; fill: #3fb950; }
+      .t-user { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13.5px; font-weight: bold; fill: #58a6ff; }
+      .t-path { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13.5px; font-weight: bold; fill: #d2a8ff; }
+      .t-cmd { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 14px; font-weight: bold; fill: #f0f6fc; }
+      
+      .ps-hdr { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 12px; font-weight: bold; fill: #8b949e; }
+      .ps-pid { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13px; fill: #79c0ff; }
+      .ps-name { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13px; font-weight: bold; fill: #f0f6fc; }
+      .ps-stack { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 12.5px; fill: #a5d6ff; }
+      .ps-status { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 12px; font-weight: bold; fill: #3fb950; }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="850" height="280" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <path d="M 0,8 A 8,8 0 0,1 8,0 L 842,0 A 8,8 0 0,1 850,8 L 850,36 L 0,36 Z" fill="#161b22"/>
+  <line x1="0" y1="36" x2="850" y2="36" stroke="#30363d" stroke-width="1"/>
+  <circle cx="22" cy="18" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="18" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="18" r="6" fill="#27c93f"/>
+  <text x="425" y="22" class="t-title" text-anchor="middle">harish@backend-node-01: ~/projects (zsh)</text>
+
+  <!-- Command Line -->
+  <g transform="translate(30, 62)">
+    <text x="0" y="0" class="t-user">harish</text>
+    <text x="50" y="0" class="t-prompt">@platform-eng</text>
+    <text x="160" y="0" class="t-path">:~/projects$</text>
+    <text x="260" y="0" class="t-cmd">ps aux | grep active_services</text>
+  </g>
+
+  <!-- Process List Table -->
+  <g transform="translate(35, 95)">
+    <!-- Header -->
+    <text x="0" y="0" class="ps-hdr">PID</text>
+    <text x="70" y="0" class="ps-hdr">SERVICE / PROJECT</text>
+    <text x="260" y="0" class="ps-hdr">STACK &amp; ARCHITECTURE</text>
+    <text x="630" y="0" class="ps-hdr">STATE</text>
+    <line x1="0" y1="10" x2="780" y2="10" stroke="#30363d" stroke-width="1"/>
+
+    <!-- Service 1: Tick-It -->
+    <g transform="translate(0, 32)">
+      <text x="0" y="0" class="ps-pid">1024</text>
+      <text x="70" y="0" class="ps-name">./tick-it</text>
+      <text x="260" y="0" class="ps-stack">Spring Cloud • Kafka • Redis • Microservices</text>
+      <text x="630" y="0" class="ps-status">RUNNING (8080)</text>
+    </g>
+
+    <!-- Service 2: RAG Engine -->
+    <g transform="translate(0, 62)">
+      <text x="0" y="0" class="ps-pid">2048</text>
+      <text x="70" y="0" class="ps-name">./rag-engine</text>
+      <text x="260" y="0" class="ps-stack">Spring AI • Gemini API • pgvector Embeddings</text>
+      <text x="630" y="0" class="ps-status">RUNNING (8090)</text>
+    </g>
+
+    <!-- Service 3: SkillSprint -->
+    <g transform="translate(0, 92)">
+      <text x="0" y="0" class="ps-pid">3072</text>
+      <text x="70" y="0" class="ps-name">./skillsprint</text>
+      <text x="260" y="0" class="ps-stack">Spring Security • JWT • MySQL • Docker</text>
+      <text x="630" y="0" class="ps-status">DEPLOYED</text>
+    </g>
+
+    <!-- Service 4: EcoBites -->
+    <g transform="translate(0, 122)">
+      <text x="0" y="0" class="ps-pid">4096</text>
+      <text x="70" y="0" class="ps-name">./ecobites</text>
+      <text x="260" y="0" class="ps-stack">WebSockets (STOMP) • PostgreSQL • Nginx</text>
+      <text x="630" y="0" class="ps-status">DEPLOYED</text>
+    </g>
+
+    <!-- Service 5: Portfolio -->
+    <g transform="translate(0, 152)">
+      <text x="0" y="0" class="ps-pid">5120</text>
+      <text x="70" y="0" class="ps-name">./portfolio-web</text>
+      <text x="260" y="0" class="ps-stack">JavaScript • WebGL Canvas • Responsive UI</text>
+      <text x="630" y="0" class="ps-status">ACTIVE</text>
+    </g>
+  </g>
+</svg>

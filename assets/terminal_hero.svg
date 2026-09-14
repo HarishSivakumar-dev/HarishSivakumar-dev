@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260" style="background:transparent;">
+  <defs>
+    <style>
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes pulse-green {
+        0%, 100% { fill: #3fb950; opacity: 1; }
+        50% { fill: #2ea043; opacity: 0.5; }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(260px); }
+      }
+      .t-title { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13px; font-weight: bold; fill: #8b949e; }
+      .t-prompt { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 14px; font-weight: bold; fill: #3fb950; }
+      .t-user { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 14px; font-weight: bold; fill: #58a6ff; }
+      .t-path { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 14px; font-weight: bold; fill: #d2a8ff; }
+      .t-cmd { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 15px; font-weight: bold; fill: #f0f6fc; }
+      .t-name { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 32px; font-weight: 900; fill: #ffffff; letter-spacing: 2px; }
+      .t-role { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 15px; font-weight: bold; fill: #3fb950; letter-spacing: 1px; }
+      .t-sub { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13px; fill: #8b949e; }
+      .t-status { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 12px; fill: #3fb950; }
+      .cursor { animation: blink 0.9s infinite; fill: #3fb950; }
+      .status-dot { animation: pulse-green 2s infinite; }
+    </style>
+  </defs>
+
+  <!-- Outer Window Container -->
+  <rect width="850" height="260" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Terminal Top Bar -->
+  <path d="M 0,8 A 8,8 0 0,1 8,0 L 842,0 A 8,8 0 0,1 850,8 L 850,36 L 0,36 Z" fill="#161b22"/>
+  <line x1="0" y1="36" x2="850" y2="36" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Mac Control Window Buttons -->
+  <circle cx="22" cy="18" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="18" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="18" r="6" fill="#27c93f"/>
+
+  <!-- Window Title -->
+  <text x="425" y="22" class="t-title" text-anchor="middle">harish@backend-node-01:~ (zsh)</text>
+
+  <!-- Terminal Body Content -->
+
+  <!-- Command Line 1 -->
+  <g transform="translate(30, 68)">
+    <text x="0" y="0" class="t-user">harish</text>
+    <text x="50" y="0" class="t-prompt">@platform-eng</text>
+    <text x="160" y="0" class="t-path">:~$</text>
+    <text x="195" y="0" class="t-cmd">./init_developer_session.sh --verbose</text>
+  </g>
+
+  <!-- Output Block -->
+  <g transform="translate(30, 118)">
+    <text x="0" y="0" class="t-name">HARISH SIVAKUMAR</text>
+    <text x="0" y="30" class="t-role">❯ JAVA BACKEND &amp; PLATFORM ENGINEER</text>
+    <text x="0" y="55" class="t-sub">Distributed Systems • Microservices Architecture • Spring AI &amp; RAG Pipelines</text>
+  </g>
+
+  <!-- Active Prompt Line 2 -->
+  <g transform="translate(30, 220)">
+    <text x="0" y="0" class="t-user">harish</text>
+    <text x="50" y="0" class="t-prompt">@platform-eng</text>
+    <text x="160" y="0" class="t-path">:~$</text>
+    <text x="195" y="0" class="t-cmd">systemctl status backend.service</text>
+    <!-- Blinking Cursor -->
+    <rect x="475" y="-13" width="10" height="17" class="cursor"/>
+  </g>
+
+  <!-- Status Badge Right Corner -->
+  <g transform="translate(670, 212)">
+    <circle cx="10" cy="5" r="5" fill="#3fb950" class="status-dot"/>
+    <text x="22" y="9" class="t-status">SYSTEM ONLINE [99.99%]</text>
+  </g>
+</svg>

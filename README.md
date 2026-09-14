@@ -1,106 +1,46 @@
 <div align="center">
-  <img src="assets/header.svg" alt="Harish Sivakumar Header Banner" width="100%" />
-</div>
-
-<br/>
-
-<!-- ==================== WHO I AM / WHAT I DO / VISION / BEYOND CODE ==================== -->
-<table>
-  <tr>
-    <td bgcolor="#0d1117">
-      <br/>
-      <img src="assets/sec_whoiam.svg" alt="WHO I AM" width="100%"/>
-      <p>
-        Hey, I'm Harish – a 3rd-year ECE student &amp; Java backend engineer passionate about building high-throughput microservices, distributed platform systems, and AI-powered backends. I work at the intersection of Java, Spring Boot, cloud infrastructure, and distributed data pipelines.
-      </p>
-      <br/>
-      <img src="assets/sec_whatido.svg" alt="WHAT I DO" width="100%"/>
-      <p>
-        I build software and AI-powered tools that solve real problems – and I can't stop. Focused on designing low-latency event ticketing microservices (Tick-It), real-time food redistribution networks (EcoBites), Spring AI RAG engines, and understanding everything from first principles.
-      </p>
-      <br/>
-      <img src="assets/sec_vision.svg" alt="VISION" width="100%"/>
-      <p>
-        My goal is to engineer fault-tolerant, scalable, and resilient backend infrastructure. I want to build platform tools that genuinely make technology work for humans – pushing high-concurrency systems further ahead than yesterday.
-      </p>
-      <br/>
-      <img src="assets/sec_beyondcode.svg" alt="BEYOND CODE" width="100%"/>
-      <p>
-        Data Structures &amp; Algorithms, exploring distributed system design, tinkering with vector databases &amp; LLM embeddings, and continuous learning – that's me outside of code.
-      </p>
-      <br/>
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-<!-- ==================== CONNECT TABLE ==================== -->
-<div align="center">
-  <table>
-    <thead>
-      <tr>
-        <th align="center">Linkedin</th>
-        <th align="center">X (Twitter)</th>
-        <th align="center">Gmail</th>
-        <th align="center">Website</th>
-        <th align="center">LeetCode</th>
-        <th align="center">GitHub</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="center">
-          <a href="https://linkedin.com/in/">
-            <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-          </a>
-        </td>
-        <td align="center">
-          <a href="https://x.com/">
-            <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" />
-          </a>
-        </td>
-        <td align="center">
-          <a href="mailto:harishsivakumar.dev@gmail.com">
-            <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-          </a>
-        </td>
-        <td align="center">
-          <a href="#">
-            <img src="https://img.shields.io/badge/Website-D97706?style=for-the-badge&logo=codecademy&logoColor=white" />
-          </a>
-        </td>
-        <td align="center">
-          <a href="#">
-            <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
-          </a>
-        </td>
-        <td align="center">
-          <a href="https://github.com/HarishSivakumar-dev">
-            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<br/>
-
-<!-- ==================== 3D CONTRIBUTION & METRICS GRAPH ==================== -->
-<div align="center">
-  <img src="profile-3d-contrib/profile-night-view.svg" alt="Dynamic 3D Contribution Graph" width="100%" />
-</div>
-
-<br/>
-
-<!-- ==================== SKILL SET ==================== -->
-<div align="center">
-  <img src="assets/sec_skillset.svg" alt="SKILL SET" width="100%"/>
+  <img src="assets/terminal_hero.svg" alt="Harish Terminal Hero CMD Prompt" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,postgres,mysql,redis,kafka,docker,aws,nginx,git,maven,cpp,c,py,js,html,css&perline=7&theme=dark" alt="Harish Tech Stack Icons" width="100%" />
+  <img src="assets/terminal_about.svg" alt="Harish Profile JSON Terminal Output" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="assets/terminal_skills.svg" alt="Backend Terminal Skill Tree Diagnostics" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=java,spring,postgres,mysql,redis,kafka,docker,aws,nginx,git,maven,cpp,c,py,js,html,css&perline=9&theme=dark" alt="Harish Dynamic Skill Icons" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="assets/terminal_projects.svg" alt="Terminal Active Services Process Output" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="profile-3d-contrib/profile-night-view.svg" alt="3D Isometric Contribution Graph" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=HarishSivakumar-dev&show_icons=true&theme=dark&bg_color=0d1117&title_color=3fb950&text_color=c9d1d9&icon_color=2ea043&border_color=30363d&hide_border=false" width="49%" alt="GitHub Live Stats"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=HarishSivakumar-dev&theme=dark&background=0D1117&stroke=30363D&alarm=2EA043&fire=2EA043&ring=2EA043&brightmode=true" width="49%" alt="GitHub Live Streak"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="assets/terminal_contact.svg" alt="Terminal Connection Channel" width="100%" />
 </div>
