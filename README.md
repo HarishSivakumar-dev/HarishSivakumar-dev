@@ -1,23 +1,26 @@
 <div align="center">
 
 ```cmd
-================================================================================
-  SYSTEM INTERFACE v2.4 | BACKEND & DISTRIBUTED SYSTEMS ENGINE
-================================================================================
-  USER       : Harish Sivakumar
-  ROLE       : Backend Developer
-  SPECIALTY  : Microservices, Distributed Systems & AI Integration
-  STATUS     : Operational
-================================================================================
+Microsoft Windows [Version 10.0.22631]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\HarishSivakumar> whoami /all
+
+USER INFORMATION
+----------------
+User Name  : Harish Sivakumar
+Role       : Backend Developer
+Specialty  : Microservices, Distributed Systems & AI Integration
+Status     : Operational
 ```
 
 </div>
 
-```bash
-$ neofetch --user harish-sivakumar
+```cmd
+C:\Users\HarishSivakumar> type %USERPROFILE%\system_spec.yaml
 ```
 ```yaml
-OS         : Linux / Windows
+OS         : Windows / Linux
 Runtime    : Java (17+) / Spring Boot 3.x
 Services   : Microservices, Event Streaming, RAG Pipelines
 Databases  : PostgreSQL (pgvector), MySQL, Redis
@@ -29,6 +32,9 @@ Security   : OAuth2, JWT, Spring Security
 
 ### `01. Technical Stack & Services`
 
+```cmd
+C:\Users\HarishSivakumar> type %USERPROFILE%\config\backend_stack.yaml
+```
 ```yaml
 # Core Engineering Frameworks
 runtime_environment:
@@ -66,6 +72,9 @@ database_infrastructure:
 
 ### `02. AI & Distributed Systems Integration`
 
+```cmd
+C:\Users\HarishSivakumar> type %USERPROFILE%\config\ai_and_security.yaml
+```
 ```yaml
 ai_engineering:
   framework: Spring AI
@@ -87,7 +96,7 @@ security_and_devops:
 ### `03. Visual Stack & Badges`
 
 ```cmd
-C:\Users\harish> ls -la /sys/technologies
+C:\Users\HarishSivakumar> dir /b %USERPROFILE%\technologies
 ```
 
 #### Languages & Core Frameworks
@@ -138,30 +147,27 @@ C:\Users\harish> ls -la /sys/technologies
 
 ---
 
-### `05. Active Services`
+### `05. Running Processes`
 
 ```cmd
-C:\Users\harish> systemctl status backend-services.service
-● backend-services.service - Production Microservices Infrastructure
-   Loaded: loaded (/etc/systemd/system/backend.service; enabled)
-   Active: active (running) since Boot
-   CGroup: /system.slice/backend.service
-           ├─ kafka-broker (Port: 9092)
-           ├─ redis-cache (Port: 6379)
-           ├─ eureka-naming-server (Port: 8761)
-           └─ spring-ai-rag-service (Port: 8080)
+C:\Users\HarishSivakumar> tasklist /FI "STATUS eq RUNNING" /FO TABLE
+
+Image Name                   PID Session Name        Mem Usage  Description
+======================== ======== ================ ============ ===================================
+java.exe                    10420 Console             412,852 K  Spring Boot / Microservices Core
+kafka_server.exe             8912 Console             310,120 K  Apache Kafka Message Broker
+redis-server.exe             4508 Console              48,200 K  Redis In-Memory Cache
+postgres.exe                 6124 Console             185,400 K  PostgreSQL + pgvector Engine
+docker.exe                  12048 Console             890,110 K  Docker Desktop Containers
 ```
 
 ---
 
 ### `06. Endpoint / Contact`
 
-```bash
-$ curl --request GET \
-  --url "https://api.harish.dev/v1/contact" \
-  --header "Accept: application/json"
+```cmd
+C:\Users\HarishSivakumar> curl.exe -s -X GET "https://api.harish.dev/v1/contact"
 ```
-
 ```json
 {
   "github": "https://github.com/HarishSivakumar-Dev",
