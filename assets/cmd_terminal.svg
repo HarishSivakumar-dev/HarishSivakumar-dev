@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 440" width="100%" height="auto">
+  <defs>
+    <style>
+      .bg { fill: #0c0c0c; }
+      .header-bg { fill: #1f1f1f; }
+      .title-text { fill: #cccccc; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: 400; }
+      .cmd-text { fill: #cccccc; font-family: 'Consolas', 'Cascadia Code', 'Courier New', monospace; font-size: 14px; line-height: 1.5; }
+      .prompt { fill: #ffffff; font-weight: bold; }
+      .highlight { fill: #38daf0; }
+      .green { fill: #4caf50; }
+      .comment { fill: #767676; }
+      .cursor { fill: #cccccc; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Window Container with Shadow & Border -->
+  <rect x="5" y="5" width="840" height="430" rx="8" ry="8" class="header-bg" filter="url(#shadow)" stroke="#333333" stroke-width="1" />
+
+  <!-- Title Bar -->
+  <rect x="5" y="5" width="840" height="36" rx="8" ry="8" class="header-bg" />
+  <!-- Title bar bottom divider line -->
+  <line x1="5" y1="41" x2="845" y2="41" stroke="#2b2b2b" stroke-width="1" />
+
+  <!-- Window Icon (CMD Prompt Icon) -->
+  <g transform="translate(20, 15)">
+    <rect x="0" y="0" width="14" height="14" fill="#000000" rx="2" stroke="#666" stroke-width="1"/>
+    <text x="2" y="10" fill="#ffffff" font-family="Consolas" font-size="10" font-weight="bold">&gt;_</text>
+  </g>
+
+  <!-- Window Title -->
+  <text x="44" y="27" class="title-text">Command Prompt - Harish Sivakumar</text>
+
+  <!-- Window Controls (Minimize, Maximize, Close) -->
+  <g transform="translate(740, 10)">
+    <!-- Minimize -->
+    <rect x="0" y="0" width="30" height="24" fill="transparent" />
+    <line x1="10" y1="14" x2="20" y2="14" stroke="#cccccc" stroke-width="1" />
+    <!-- Maximize -->
+    <rect x="32" y="0" width="30" height="24" fill="transparent" />
+    <rect x="42" y="7" width="10" height="10" stroke="#cccccc" stroke-width="1" fill="transparent" />
+    <!-- Close -->
+    <rect x="64" y="0" width="34" height="24" fill="transparent" />
+    <line x1="75" y1="7" x2="87" y2="17" stroke="#cccccc" stroke-width="1.2" />
+    <line x1="87" y1="7" x2="75" y2="17" stroke="#cccccc" stroke-width="1.2" />
+  </g>
+
+  <!-- Terminal Body Background -->
+  <rect x="5" y="42" width="840" height="392" rx="0" ry="0" class="bg" />
+
+  <!-- Terminal Content Text -->
+  <g transform="translate(20, 70)" class="cmd-text">
+    <!-- OS Header -->
+    <text x="0" y="0">Microsoft Windows [Version 10.0.22631.4169]</text>
+    <text x="0" y="20">(c) Microsoft Corporation. All rights reserved.</text>
+
+    <!-- Command 1: whoami -->
+    <text x="0" y="60"><tspan class="prompt">C:\Users\HarishSivakumar&gt;</tspan> whoami /all</text>
+    
+    <!-- Command 1 Output -->
+    <text x="0" y="90" class="comment">================================================================================</text>
+    <text x="0" y="110"><tspan class="prompt">USER      :</tspan> Harish Sivakumar</text>
+    <text x="0" y="130"><tspan class="prompt">ROLE      :</tspan> Backend Developer</text>
+    <text x="0" y="150"><tspan class="prompt">SPECIALTY :</tspan> Microservices | Distributed Systems | Event-Driven &amp; RAG</text>
+    <text x="0" y="170"><tspan class="prompt">STATUS    :</tspan> <tspan class="green">OPERATIONAL (200 OK)</tspan></text>
+    <text x="0" y="190" class="comment">================================================================================</text>
+
+    <!-- Command 2: tasklist -->
+    <text x="0" y="230"><tspan class="prompt">C:\Users\HarishSivakumar&gt;</tspan> tasklist /FI "STATUS eq RUNNING" /FO TABLE</text>
+
+    <!-- Command 2 Output -->
+    <text x="0" y="260" class="comment">Image Name                   PID Session Name        Mem Usage  Description</text>
+    <text x="0" y="275" class="comment">======================== ======== ================ ============ ===================================</text>
+    <text x="0" y="295">java.exe                    10420 Console             412,852 K  Spring Boot / Microservices Core</text>
+    <text x="0" y="315">kafka_server.exe             8912 Console             310,120 K  Apache Kafka Message Broker</text>
+    <text x="0" y="335">redis-server.exe             4508 Console              48,200 K  Redis In-Memory Cache</text>
+    <text x="0" y="355">postgres.exe                 6124 Console             185,400 K  PostgreSQL + pgvector Engine</text>
+    
+    <!-- Active Prompt Cursor -->
+    <text x="0" y="390"><tspan class="prompt">C:\Users\HarishSivakumar&gt;</tspan> <tspan class="cursor">█</tspan></text>
+  </g>
+</svg>

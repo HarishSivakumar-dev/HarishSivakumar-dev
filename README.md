@@ -1,20 +1,8 @@
 <div align="center">
-
-```cmd
-Microsoft Windows [Version 10.0.22631]
-(c) Microsoft Corporation. All rights reserved.
-
-C:\Users\HarishSivakumar> whoami /all
-
-USER INFORMATION
-----------------
-User Name  : Harish Sivakumar
-Role       : Backend Developer
-Specialty  : Microservices, Distributed Systems & AI Integration
-Status     : Operational
-```
-
+  <img src="./assets/cmd_terminal.svg" alt="Command Prompt Terminal Window" width="100%" />
 </div>
+
+<br />
 
 ```cmd
 C:\Users\HarishSivakumar> type %USERPROFILE%\system_spec.yaml
@@ -147,7 +135,7 @@ C:\Users\HarishSivakumar> dir /b %USERPROFILE%\technologies
 
 ---
 
-### `05. Running Processes`
+### `05. Active Services`
 
 ```cmd
 C:\Users\HarishSivakumar> tasklist /FI "STATUS eq RUNNING" /FO TABLE
@@ -168,6 +156,7 @@ docker.exe                  12048 Console             890,110 K  Docker Desktop 
 ```cmd
 C:\Users\HarishSivakumar> curl.exe -s -X GET "https://api.harish.dev/v1/contact"
 ```
+
 ```json
 {
   "github": "https://github.com/HarishSivakumar-Dev",
