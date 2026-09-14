@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=121417&height=200&section=header&text=HARISH%20SIVAKUMAR&fontSize=38&fontColor=ffffff&fontAlign=8&fontAlignY=40&desc=JAVA%20BACKEND%20/%20PLATFORM%20ENGINEER&descSize=13&descAlign=85&descAlignY=75" width="100%" />
+  <img src="assets/header.svg" alt="Harish Sivakumar Header Banner" width="100%" />
 </div>
 
 <br/>
@@ -9,22 +9,22 @@
   <tr>
     <td bgcolor="#0d1117">
       <br/>
-      <img src="https://capsule-render.vercel.app/api?type=rect&color=161b22&height=40&section=header&text=WHO%20I%20AM&fontSize=16&fontColor=ffffff&fontAlign=3&fontAlignY=60" width="100%"/>
+      <img src="assets/sec_whoiam.svg" alt="WHO I AM" width="100%"/>
       <p>
         Hey, I'm Harish – a 3rd-year ECE student &amp; Java backend engineer passionate about building high-throughput microservices, distributed platform systems, and AI-powered backends. I work at the intersection of Java, Spring Boot, cloud infrastructure, and distributed data pipelines.
       </p>
       <br/>
-      <img src="https://capsule-render.vercel.app/api?type=rect&color=161b22&height=40&section=header&text=WHAT%20I%20DO&fontSize=16&fontColor=ffffff&fontAlign=3&fontAlignY=60" width="100%"/>
+      <img src="assets/sec_whatido.svg" alt="WHAT I DO" width="100%"/>
       <p>
         I build software and AI-powered tools that solve real problems – and I can't stop. Focused on designing low-latency event ticketing microservices (Tick-It), real-time food redistribution networks (EcoBites), Spring AI RAG engines, and understanding everything from first principles.
       </p>
       <br/>
-      <img src="https://capsule-render.vercel.app/api?type=rect&color=161b22&height=40&section=header&text=VISION&fontSize=16&fontColor=ffffff&fontAlign=3&fontAlignY=60" width="100%"/>
+      <img src="assets/sec_vision.svg" alt="VISION" width="100%"/>
       <p>
         My goal is to engineer fault-tolerant, scalable, and resilient backend infrastructure. I want to build platform tools that genuinely make technology work for humans – pushing high-concurrency systems further ahead than yesterday.
       </p>
       <br/>
-      <img src="https://capsule-render.vercel.app/api?type=rect&color=161b22&height=40&section=header&text=BEYOND%20CODE&fontSize=16&fontColor=ffffff&fontAlign=3&fontAlignY=60" width="100%"/>
+      <img src="assets/sec_beyondcode.svg" alt="BEYOND CODE" width="100%"/>
       <p>
         Data Structures &amp; Algorithms, exploring distributed system design, tinkering with vector databases &amp; LLM embeddings, and continuous learning – that's me outside of code.
       </p>
@@ -96,7 +96,7 @@
 
 <!-- ==================== SKILL SET ==================== -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=161b22&height=40&section=header&text=SKILL%20SET&fontSize=16&fontColor=ffffff&fontAlign=3&fontAlignY=60" width="100%"/>
+  <img src="assets/sec_skillset.svg" alt="SKILL SET" width="100%"/>
 </div>
 
 <br/>
