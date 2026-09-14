@@ -1,170 +1,128 @@
-<p align="center">
-  <img src="assets/header_banner.svg" width="100%" alt="Harish Sivakumar Banner" />
-</p>
-
-<p align="center">
-  <img src="assets/title_who_i_am.svg" width="100%" alt="Who I Am Title" />
-</p> 
-
 <div align="center">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="160" align="center">
-      <img src="https://img.shields.io/badge/JAVA_21-LTS-007396?style=for-the-badge&logo=java&logoColor=white" width="140px"/>
-    </td>
-    <td align="center">
-      <table border="0" cellspacing="0" cellpadding="8">
-        <tr>
-          <th>LinkedIn</th>
-          <th>GitHub</th>
-          <th>Gmail</th>
-          <th>Portfolio</th>
-          <th>LeetCode</th>
-        </tr>
-        <tr>
-          <td align="center"><br><a href="https://linkedin.com/in/" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/yogeshwaran01/yogeshwaran01@latest/svgs/linkedin.svg" alt="LinkedIn" width="42px" height="42px"></a><br><br></td>
-          <td align="center"><br><a href="https://github.com/HarishSivakumar-dev" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/yogeshwaran01/yogeshwaran01@latest/svgs/github.svg" alt="GitHub" width="42px" height="42px"></a><br><br></td>
-          <td align="center"><br><a href="mailto:harishsivakumar.dev@gmail.com" title="Gmail"><img src="https://cdn.jsdelivr.net/gh/yogeshwaran01/yogeshwaran01@latest/svgs/gmail.svg" alt="Gmail" width="42px" height="42px"></a><br><br></td>
-          <td align="center"><br><a href="#" title="Portfolio"><img src="https://cdn.jsdelivr.net/gh/yogeshwaran01/yogeshwaran01@latest/svgs/website.svg" alt="Portfolio" width="42px" height="42px"></a><br><br></td>
-          <td align="center"><br><a href="https://leetcode.com/" title="LeetCode"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="LeetCode" width="42px" height="42px"></a><br><br></td>
-        </tr>
-      </table>
-    </td>
-    <td width="160" align="center">
-      <img src="https://img.shields.io/badge/SPRING_BOOT-3.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" width="140px"/>
-    </td>
-  </tr>
-</table>
-</div>
-
-<br/>
-
-<p align="center">
-  <img src="assets/title_skills.svg" width="100%" alt="Skills Title" />
-</p>
-
-<div align="center">
-  <table width="100%">
-    <!-- ROW 1: Languages & Backend Core -->
-    <tr>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=java" width="42px"/><br>Java 21</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=spring" width="42px"/><br>Spring Boot</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=cpp" width="42px"/><br>C++</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=c" width="42px"/><br>C</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=py" width="42px"/><br>Python</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=js" width="42px"/><br>JavaScript</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=mysql" width="42px"/><br>SQL</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=html" width="42px"/><br>HTML5</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=css" width="42px"/><br>CSS3</td>
-      <td align="center" width="10%"><img src="https://skillicons.dev/icons?i=git" width="42px"/><br>Git</td>
-    </tr>
-    <!-- ROW 2: Microservices, Distributed Systems & Messaging -->
-    <tr>
-      <td align="center"><img src="https://skillicons.dev/icons?i=kafka" width="42px"/><br>Kafka</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=redis" width="42px"/><br>Redis</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/springsecurity/6DB33F" width="42px"/><br>Spring Sec</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/jsonwebtokens/000000" width="42px"/><br>JWT / OAuth2</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/hibernate/59666C" width="42px"/><br>JPA / Hib</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=postman" width="42px"/><br>OpenFeign</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/socketdotio/010101" width="42px"/><br>WebSockets</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/lua/2C2D72" width="42px"/><br>Lua Scripts</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/apache/D22128" width="42px"/><br>Config Server</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/nginx/009639" width="42px"/><br>API Gateway</td>
-    </tr>
-    <!-- ROW 3: Databases, Cloud & Infrastructure -->
-    <tr>
-      <td align="center"><img src="https://skillicons.dev/icons?i=postgres" width="42px"/><br>PostgreSQL</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=mysql" width="42px"/><br>MySQL</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/postgresql/4169E1" width="42px"/><br>pgvector</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=docker" width="42px"/><br>Docker</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=aws" width="42px"/><br>AWS EC2</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=nginx" width="42px"/><br>Nginx</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=linux" width="42px"/><br>Linux</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=maven" width="42px"/><br>Maven</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=github" width="42px"/><br>GitHub</td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=vscode" width="42px"/><br>VS Code</td>
-    </tr>
-    <!-- ROW 4: AI / RAG & Algorithmic Paradigm -->
-    <tr>
-      <td align="center"><img src="https://cdn.simpleicons.org/google/4285F4" width="42px"/><br>Spring AI</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" width="42px"/><br>Gemini API</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/openai/412991" width="42px"/><br>Embeddings</td>
-      <td align="center"><img src="https://cdn.simpleicons.org/vector/000000" width="42px"/><br>Vector Search</td>
-      <td align="center"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" width="42px"/><br>LeetCode 330+</td>
-      <td align="center"><img src="https://img.icons8.com/color/48/data-structure.png" width="42px"/><br>Arrays/Hash</td>
-      <td align="center"><img src="https://img.icons8.com/color/48/tree-structure.png" width="42px"/><br>Trees/Graphs</td>
-      <td align="center"><img src="https://img.icons8.com/color/48/algorithm.png" width="42px"/><br>DFS / BFS</td>
-      <td align="center"><img src="https://img.icons8.com/color/48/binary-code.png" width="42px"/><br>Recursion</td>
-      <td align="center"><img src="https://img.icons8.com/color/48/mind-map.png" width="42px"/><br>Backtracking</td>
-    </tr>
-  </table>
-</div>
-
-<br/>
-
-<p align="center">
-  <img src="assets/title_projects.svg" width="100%" alt="Projects Title" />
-</p>
-
-<div align="center">
-  <table width="100%">
-    <tr>
-      <td width="50%" valign="top">
-        <h3>🎟️ Tick-It</h3>
-        <p><b>Enterprise Microservices Ticket Management & Grievance Platform</b></p>
-        <ul>
-          <li>Spring Boot microservices with Eureka Service Discovery &amp; Spring Cloud Gateway.</li>
-          <li>Redis distributed rate-limiting using Lua scripts &amp; session caching.</li>
-          <li>JWT Stateless Auth &amp; Google OAuth2 with Role-Based Access Control (RBAC).</li>
-          <li>Inter-service OpenFeign RPCs &amp; real-time STOMP WebSockets notification alert pipeline.</li>
-        </ul>
-        <p><code>Spring Boot</code> • <code>Eureka</code> • <code>Gateway</code> • <code>JWT</code> • <code>Redis</code> • <code>Kafka</code> • <code>OpenFeign</code></p>
-      </td>
-      <td width="50%" valign="top">
-        <h3>🚀 SkillSprint</h3>
-        <p><b>Enterprise Corporate Learning &amp; Certification Backend</b></p>
-        <ul>
-          <li>Backend engine for multi-tenant course management, progress tracking &amp; certificates.</li>
-          <li>Relational schema optimization in MySQL with Redis query caching &amp; background cron jobs.</li>
-          <li>Containerized architecture using Docker &amp; Docker Compose.</li>
-        </ul>
-        <p><code>Spring Boot</code> • <code>MySQL</code> • <code>Redis</code> • <code>Docker</code> • <code>RBAC</code> • <code>Scheduled Jobs</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%" valign="top">
-        <h3>🧠 Enterprise RAG Engine</h3>
-        <p><b>AI-Augmented Contextual Retrieval Pipeline</b></p>
-        <ul>
-          <li>Document ingestion pipeline using Spring AI &amp; Google Gemini API.</li>
-          <li>Vector embedding storage in PostgreSQL with pgvector cosine similarity search.</li>
-        </ul>
-        <p><code>Spring AI</code> • <code>Google Gemini</code> • <code>PostgreSQL</code> • <code>pgvector</code> • <code>Embeddings</code></p>
-      </td>
-      <td width="50%" valign="top">
-        <h3>🌱 EcoBites</h3>
-        <p><b>Hackathon-Winning Surplus Food Redistribution Backend 🏆</b></p>
-        <ul>
-          <li>High-efficiency REST API backend mapping food donors to shelters.</li>
-          <li>Optimized spatial query persistence layer using Spring Data JPA &amp; MySQL.</li>
-        </ul>
-        <p><code>Spring Boot</code> • <code>Spring Data JPA</code> • <code>MySQL</code> • <code>REST APIs</code></p>
-      </td>
-    </tr>
-  </table>
+  <img src="assets/hero.svg" alt="Harish Sivakumar Terminal Banner" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="assets/architecture.svg" width="100%" alt="Distributed Architecture Diagram" />
+
+[![Status](https://img.shields.io/badge/Status-ONLINE-3fb950?style=for-the-badge&logo=springboot&logoColor=white)](https://github.com/HarishSivakumar-dev)
+[![Role](https://img.shields.io/badge/Role-Java_Backend_%26_Platform_Engineer-58a6ff?style=for-the-badge&logo=java&logoColor=white)](https://github.com/HarishSivakumar-dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/)
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harishsivakumar.dev@gmail.com)
+
 </div>
 
 <br/>
 
-<p align="center">
-  <img src="assets/title_stats.svg" width="100%" alt="Stats Title" />
-</p>
+```bash
+[harish@platform-node-01 ~]$ neofetch --engineer
+
+       _  _  _    _  ____  ___ _  _         harish@platform-node-01
+      | || |/ \  | |/ ___|/ _ \ || |        -----------------------
+      | __ / _ \ | | \___ \ | | | || |_     OS        : Enterprise Linux x86_64
+      |_||_/_/ \_\|_|\____/\_/ \_|_  _|     Host      : Java 21 LTS / Spring Boot 3
+                                            Uptime    : 3rd-Year ECE @ VIT Chennai
+                                            Kernel    : Distributed Systems & Platform Engineering
+
+[+] Core Stack      : Java, C, C++, Python, JavaScript, SQL, HTML5, CSS3
+[+] Backend         : Spring Boot 3, Spring Security, JWT, OAuth2, JPA / Hibernate, OpenFeign, REST
+[+] Microservices   : Eureka Service Discovery, Spring Cloud Config, Centralized API Gateway
+[+] Distributed     : Apache Kafka, Redis (Caching & Rate Limiting), WebSockets/STOMP
+[+] Databases       : PostgreSQL, MySQL, pgvector (Vector Similarity Search)
+[+] Cloud / DevOps  : Docker, Docker Compose, AWS EC2, Nginx, Linux, Git, Maven
+[+] AI / RAG        : Spring AI, Google Gemini API, RAG Pipelines, Vector Embeddings
+[+] Algorithmic     : 330+ LeetCode Solved (Arrays, Graphs, Trees, DFS/BFS, Window)
+```
+
+<br/>
+
+```bash
+[harish@platform-node-01 ~]$ traceroute -v gateway.harish.dev
+```
+
+<div align="center">
+  <img src="assets/architecture.svg" alt="Distributed Request Flow Diagram" width="100%" />
+</div>
+
+<br/>
+
+```bash
+[harish@platform-node-01 ~]$ kubectl get microservices -n production
+
+SERVICE            STACK                           PURPOSE
+----------------   -----------------------------   -------------------------------------------------
+backend-core       Spring Boot 3, Security, JWT    High-throughput RESTful services & RBAC auth
+discovery-gateway  Eureka, Spring Cloud Gateway    Service discovery, centralized routing & filtering
+event-pipeline     Apache Kafka, WebSockets        Asynchronous event queues & real-time alerts
+cache-rate-limiter Redis Cluster, Lua Scripts        Atomic rate-limiting & low-latency query cache
+vector-search-rag  Spring AI, PostgreSQL + pgvector RAG ingestion & high-dimensional vector search
+cloud-infra        Docker, AWS EC2, Nginx          Container deployment & reverse proxying
+```
+
+<br/>
+
+```bash
+[harish@platform-node-01 ~]$ ./deployments.sh --list-compact
+
+[01] TICK-IT :: Enterprise Microservices Ticket Platform
+├── Stack: Spring Boot | Eureka | Config Server | Gateway | JWT | OAuth2 | Redis | OpenFeign | WebSockets | Kafka
+└── Specs: Distributed microservices, Lua rate-limiting, JWT/OAuth2, STOMP WebSockets, Feign RPCs.
+
+[02] SKILLSPRINT :: Corporate Learning & Certification Engine
+├── Stack: Spring Boot | MySQL | Redis | Docker | Docker Compose | RBAC | Scheduled Jobs
+└── Specs: Multi-tenant backend, MySQL query optimization, Redis cache, automated cron jobs.
+
+[03] ENTERPRISE RAG ENGINE :: Contextual Retrieval Pipeline
+├── Stack: Spring AI | Google Gemini API | PostgreSQL | pgvector
+└── Specs: Document ingestion, high-dimensional vector embeddings, cosine similarity search.
+
+[04] ECOBITES :: Surplus Food Redistribution Backend [Hackathon Winner 🏆]
+├── Stack: Spring Boot | Spring Data JPA | MySQL | REST APIs
+└── Specs: Logistics backend connecting food donors to shelters with optimized spatial queries.
+
+[05] DEVELOPER PORTFOLIO PLATFORM :: Interactive Showcase
+├── Stack: JavaScript | WebGL | HTML5 / CSS3 | Backend Mail Pipeline
+└── Specs: Portfolio platform featuring WebGL graphics and backend mail dispatcher.
+```
+
+<br/>
+
+```bash
+[harish@platform-node-01 ~]$ ./leetcode_stats --summary
+
+[OK] Total Solved: 330+ LeetCode Problems
+[OK] Core Focus  : Arrays, Hashing, Sliding Window, Two Pointers, Trees, Graphs, DFS, BFS, Backtracking
+```
+
+<br/>
+
+```bash
+[harish@platform-node-01 ~]$ cat /var/log/achievements.log
+
+[2026-03] [WINNER] EcoBites Project — Hackathon Winner 🏆
+[2026-02] [AWARD ] Best Paper Award — ICAME 2026 Conference 📄
+[2026-02] [TALK  ] Paper Accepted & Presented — ICAME 2026 🎙️
+[2026-01] [HONOR ] Recognition — VIT Chennai AI Club 24h Hackathon 🎖️
+[2026-01] [COHORT] McKinsey Forward 2026 Cohort 🎓
+```
+
+<br/>
+
+```bash
+[harish@platform-node-01 ~]$ cat /etc/philosophy.conf
+
+[1] Build systems, not just APIs.
+[2] Understand what happens behind the abstraction.
+[3] Design for scalability, reliability, and maintainability.
+[4] Learn by building production-style systems.
+```
+
+<br/>
+
+```bash
+[harish@platform-node-01 ~]$ htop --filter github-metrics
+```
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=HarishSivakumar-dev&show_icons=true&theme=dark&bg_color=0d1117&title_color=3fb950&text_color=c9d1d9&icon_color=2ea043&border_color=21262d&hide_border=false" width="49%" alt="GitHub Live Stats"/>
@@ -172,6 +130,10 @@
 </div>
 
 <br/>
+
+```bash
+[harish@platform-node-01 ~]$ tail -f /var/log/contributions.log
+```
 
 <div align="center">
   <picture>
@@ -183,12 +145,17 @@
 
 <br/>
 
+```bash
+[harish@platform-node-01 ~]$ ssh connection_request --user=recruiter
+```
+
 <div align="center">
-  <h3>🏆 Recognized Achievements</h3>
-  <p>🥇 <b>Hackathon Winner</b> — EcoBites Project | 📄 <b>Best Paper Award</b> — ICAME 2026 Conference | 🎙️ <b>Presented</b> @ ICAME 2026<br/>
-  🎖️ <b>Recognition</b> — VIT Chennai AI Club 24-Hour Hackathon | 🎓 <b>McKinsey Forward</b> — 2026 Cohort</p>
+  <p font-size="14px"><b>Seeking Java Backend, Systems &amp; Platform Engineering Roles.</b></p>
   <br/>
   <a href="mailto:harishsivakumar.dev@gmail.com">
-    <img src="https://img.shields.io/badge/Establish_Connection-harishsivakumar.dev@gmail.com-3fb950?style=for-the-badge&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Establish_RPC_Connection-harishsivakumar.dev@gmail.com-3fb950?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/">
+    <img src="https://img.shields.io/badge/Connect_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </div>
