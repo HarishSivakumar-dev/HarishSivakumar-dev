@@ -36,7 +36,7 @@
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=HarishSivakumar-dev&show_icons=true&theme=dark&bg_color=0d1117&title_color=3fb950&text_color=c9d1d9&icon_color=2ea043&border_color=30363d&hide_border=false" width="49%" alt="GitHub Live Stats"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=HarishSivakumar-dev&theme=dark&background=0D1117&stroke=30363D&alarm=2EA043&fire=2EA043&ring=2EA043&brightmode=true" width="49%" alt="GitHub Live Streak"/>
+  <img src="https://streak-stats.demolab.com/?user=HarishSivakumar-dev&theme=dark&background=0D1117&stroke=30363D&ring=3FB950&fire=3FB950&currStreakNum=3FB950" width="49%" alt="GitHub Live Streak"/>
 </div>
 
 <br/>
