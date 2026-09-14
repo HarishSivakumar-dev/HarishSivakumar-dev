@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480" width="100%" height="auto">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .header-bg { fill: #2d2d2d; }
+      .title-text { fill: #b5b5b5; font-family: '-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', sans-serif; font-size: 13px; font-weight: 500; }
+      .cmd-text { fill: #d4d4d4; font-family: 'Menlo', 'Monaco', 'Courier New', monospace; font-size: 13.5px; line-height: 1.45; }
+      .prompt { fill: #35d499; font-weight: bold; }
+      .path { fill: #569cd6; font-weight: bold; }
+      .card-bg { fill: #252526; stroke: #3c3c3c; stroke-width: 1; rx: 6; }
+      .tech-title { fill: #ffffff; font-family: 'Menlo', monospace; font-size: 12px; font-weight: bold; }
+      .tech-sub { fill: #a6a6a6; font-family: 'Menlo', monospace; font-size: 10px; }
+      .cursor { fill: #aeafad; }
+    </style>
+    <filter id="shadow2b" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- macOS Window Frame -->
+  <rect x="5" y="5" width="840" height="470" rx="10" ry="10" class="header-bg" filter="url(#shadow2b)" stroke="#3c3c3c" stroke-width="1" />
+  <rect x="5" y="5" width="840" height="38" rx="10" ry="10" class="header-bg" />
+  <line x1="5" y1="43" x2="845" y2="43" stroke="#252526" stroke-width="1" />
+
+  <!-- Traffic Lights -->
+  <circle cx="24" cy="24" r="6" fill="#ff5f56" stroke="#e0443e" stroke-width="0.5"/>
+  <circle cx="44" cy="24" r="6" fill="#ffbd2e" stroke="#dea123" stroke-width="0.5"/>
+  <circle cx="64" cy="24" r="6" fill="#27c93f" stroke="#1aab29" stroke-width="0.5"/>
+
+  <text x="425" y="28" text-anchor="middle" class="title-text">harish — ls -la /usr/local/share/icons — 80×24</text>
+
+  <rect x="5" y="44" width="840" height="430" rx="0" ry="0" class="bg" />
+
+  <g transform="translate(24, 72)" class="cmd-text">
+    <text x="0" y="0"><tspan class="prompt">harish@macbook-pro</tspan> <tspan class="path">~</tspan> % ls -la /usr/local/share/icons</text>
+
+    <!-- Row 1 Cards -->
+    <!-- Java -->
+    <g transform="translate(0, 25)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#ED8B00" />
+      <text x="23" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">☕</text>
+      <text x="52" y="24" class="tech-title">Java 17/21</text>
+      <text x="52" y="40" class="tech-sub">Core Language</text>
+    </g>
+
+    <!-- Spring Boot -->
+    <g transform="translate(200, 25)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#6DB33F" />
+      <text x="20" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">🌱</text>
+      <text x="52" y="24" class="tech-title">Spring Boot</text>
+      <text x="52" y="40" class="tech-sub">Microservices</text>
+    </g>
+
+    <!-- Apache Kafka -->
+    <g transform="translate(400, 25)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#231F20" stroke="#444"/>
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">⚡</text>
+      <text x="52" y="24" class="tech-title">Apache Kafka</text>
+      <text x="52" y="40" class="tech-sub">Event Streaming</text>
+    </g>
+
+    <!-- Redis -->
+    <g transform="translate(600, 25)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#DC382D" />
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">🔴</text>
+      <text x="52" y="24" class="tech-title">Redis Cache</text>
+      <text x="52" y="40" class="tech-sub">In-Memory DB</text>
+    </g>
+
+
+    <!-- Row 2 Cards -->
+    <!-- PostgreSQL -->
+    <g transform="translate(0, 95)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#4169E1" />
+      <text x="20" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">🐘</text>
+      <text x="52" y="24" class="tech-title">PostgreSQL</text>
+      <text x="52" y="40" class="tech-sub">SQL / pgvector</text>
+    </g>
+
+    <!-- MySQL -->
+    <g transform="translate(200, 95)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#00758F" />
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">🐬</text>
+      <text x="52" y="24" class="tech-title">MySQL</text>
+      <text x="52" y="40" class="tech-sub">Relational DB</text>
+    </g>
+
+    <!-- Docker -->
+    <g transform="translate(400, 95)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#2496ED" />
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">🐳</text>
+      <text x="52" y="24" class="tech-title">Docker</text>
+      <text x="52" y="40" class="tech-sub">Containers</text>
+    </g>
+
+    <!-- AWS EC2 -->
+    <g transform="translate(600, 95)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#FF9900" />
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">☁️</text>
+      <text x="52" y="24" class="tech-title">AWS EC2</text>
+      <text x="52" y="40" class="tech-sub">Cloud Infra</text>
+    </g>
+
+
+    <!-- Row 3 Cards -->
+    <!-- Google Gemini -->
+    <g transform="translate(0, 165)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#8E75B2" />
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">✨</text>
+      <text x="52" y="24" class="tech-title">Google Gemini</text>
+      <text x="52" y="40" class="tech-sub">AI &amp; RAG</text>
+    </g>
+
+    <!-- Spring AI -->
+    <g transform="translate(200, 165)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#6DB33F" />
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">🤖</text>
+      <text x="52" y="24" class="tech-title">Spring AI</text>
+      <text x="52" y="40" class="tech-sub">Vector Search</text>
+    </g>
+
+    <!-- Nginx -->
+    <g transform="translate(400, 165)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#009639" />
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">🌐</text>
+      <text x="52" y="24" class="tech-title">Nginx</text>
+      <text x="52" y="40" class="tech-sub">Reverse Proxy</text>
+    </g>
+
+    <!-- OAuth2 / JWT -->
+    <g transform="translate(600, 165)">
+      <rect width="185" height="54" class="card-bg"/>
+      <circle cx="28" cy="27" r="14" fill="#EB5424" />
+      <text x="21" y="32" fill="#fff" font-family="Arial" font-size="14" font-weight="bold">🔐</text>
+      <text x="52" y="24" class="tech-title">OAuth2 / JWT</text>
+      <text x="52" y="40" class="tech-sub">Security &amp; Auth</text>
+    </g>
+
+
+    <!-- SkillIcons row -->
+    <text x="0" y="250" class="comment">====================================================================================</text>
+    <text x="0" y="275"><tspan class="prompt">harish@macbook-pro</tspan> <tspan class="path">~</tspan> % echo "Integrated Developer Tooling Loaded Successfully"</text>
+    <text x="0" y="300" class="comment">====================================================================================</text>
+
+    <text x="0" y="340"><tspan class="prompt">harish@macbook-pro</tspan> <tspan class="path">~</tspan> % <tspan class="cursor">█</tspan></text>
+  </g>
+</svg>
