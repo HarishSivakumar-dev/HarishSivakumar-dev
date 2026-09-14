@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 180" width="100%" height="180" style="background:transparent;">
+  <defs>
+    <style>
+      @keyframes dash-flow {
+        0% { stroke-dashoffset: 32; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse-border {
+        0%, 100% { stroke: #30363d; }
+        50% { stroke: #3fb950; }
+      }
+      .arch-title { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 13px; font-weight: bold; fill: #3fb950; letter-spacing: 1.5px; }
+      .node-box { fill: #161b22; stroke: #30363d; stroke-width: 1.5; rx: 6px; }
+      .node-active { fill: #161b22; stroke: #3fb950; stroke-width: 1.5; rx: 6px; }
+      .node-text { font-family: 'Consolas', 'Fira Code', 'Courier New', monospace; font-size: 12px; font-weight: bold; fill: #ffffff; text-anchor: middle; }
+      .node-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #8b949e; text-anchor: middle; }
+      
+      .arrow-line { stroke: #3fb950; stroke-width: 1.8; stroke-dasharray: 6, 4; animation: dash-flow 1.2s linear infinite; }
+      .arrow-head { fill: #3fb950; }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="850" height="180" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- Section Title Header -->
+  <text x="30" y="32" class="arch-title">❯ REQUEST FLOW &amp; DISTRIBUTED ARCHITECTURE</text>
+
+  <!-- Flow Nodes & Connections -->
+  <g transform="translate(25, 55)">
+    <!-- NODE 1: CLIENT -->
+    <g transform="translate(0, 0)">
+      <rect width="125" height="75" class="node-box"/>
+      <text x="62.5" y="32" class="node-text">CLIENT APP</text>
+      <text x="62.5" y="52" class="node-sub">REST / WebSockets</text>
+    </g>
+
+    <!-- ARROW 1 -->
+    <g transform="translate(125, 37.5)">
+      <line x1="0" y1="0" x2="35" y2="0" class="arrow-line"/>
+      <polygon points="35,-4 42,0 35,4" class="arrow-head"/>
+    </g>
+
+    <!-- NODE 2: API GATEWAY -->
+    <g transform="translate(170, 0)">
+      <rect width="135" height="75" class="node-active"/>
+      <text x="67.5" y="30" class="node-text" fill="#3fb950">API GATEWAY</text>
+      <text x="67.5" y="48" class="node-sub">JWT / Rate Limiting</text>
+      <text x="67.5" y="62" class="node-sub">Spring Cloud</text>
+    </g>
+
+    <!-- ARROW 2 -->
+    <g transform="translate(305, 37.5)">
+      <line x1="0" y1="0" x2="35" y2="0" class="arrow-line"/>
+      <polygon points="35,-4 42,0 35,4" class="arrow-head"/>
+    </g>
+
+    <!-- NODE 3: MICROSERVICES -->
+    <g transform="translate(350, 0)">
+      <rect width="140" height="75" class="node-box"/>
+      <text x="70" y="30" class="node-text">MICROSERVICES</text>
+      <text x="70" y="48" class="node-sub">Eureka / Feign</text>
+      <text x="70" y="62" class="node-sub">Spring Boot Cluster</text>
+    </g>
+
+    <!-- ARROW 3 -->
+    <g transform="translate(490, 37.5)">
+      <line x1="0" y1="0" x2="35" y2="0" class="arrow-line"/>
+      <polygon points="35,-4 42,0 35,4" class="arrow-head"/>
+    </g>
+
+    <!-- NODE 4: CACHE & QUEUE -->
+    <g transform="translate(535, 0)">
+      <rect width="135" height="75" class="node-box"/>
+      <text x="67.5" y="30" class="node-text">REDIS / KAFKA</text>
+      <text x="67.5" y="48" class="node-sub">Distributed Cache</text>
+      <text x="67.5" y="62" class="node-sub">Event Stream Pipeline</text>
+    </g>
+
+    <!-- ARROW 4 -->
+    <g transform="translate(670, 37.5)">
+      <line x1="0" y1="0" x2="35" y2="0" class="arrow-line"/>
+      <polygon points="35,-4 42,0 35,4" class="arrow-head"/>
+    </g>
+
+    <!-- NODE 5: DATABASE -->
+    <g transform="translate(715, 0)">
+      <rect width="110" height="75" class="node-box"/>
+      <text x="55" y="30" class="node-text">DATABASE</text>
+      <text x="55" y="48" class="node-sub">PostgreSQL/MySQL</text>
+      <text x="55" y="62" class="node-sub">pgvector</text>
+    </g>
+  </g>
+
+  <!-- Bottom Diagnostic Footer -->
+  <text x="425" y="160" font-family="monospace" font-size="10.5" fill="#484f58" text-anchor="middle">ASYNCHRONOUS EVENT-DRIVEN &amp; DECOUPLED PERSISTENCE LAYER</text>
+</svg>
