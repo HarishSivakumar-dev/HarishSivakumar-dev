@@ -4,7 +4,7 @@
   <!-- Left Header Title -->
   <text x="35" y="65" font-family="'Courier New', Courier, monospace" font-size="36" font-weight="900" fill="#ffffff" letter-spacing="3">HARISH SIVAKUMAR</text>
 
-  <!-- Right Pixel Matrix Generative Graphic (Matching Pratham's exact banner style) -->
+  <!-- Right Pixel Matrix Generative Graphic -->
   <g transform="translate(340, 20)">
     <!-- Row 0 -->
     <rect x="0" y="0" width="14" height="14" fill="#2ea043" rx="1"/>
