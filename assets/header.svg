@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 200" width="100%" height="200" style="background:transparent;">
   <rect width="850" height="200" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
 
-  <!-- Left Header Title -->
-  <text x="35" y="65" font-family="'Courier New', Courier, monospace" font-size="36" font-weight="900" fill="#ffffff" letter-spacing="3">HARISH SIVAKUMAR</text>
+  <!-- Left Header Title (Positioned & Sized to avoid any grid collision) -->
+  <text x="30" y="60" font-family="'Courier New', Courier, monospace" font-size="30" font-weight="900" fill="#ffffff" letter-spacing="2">HARISH SIVAKUMAR</text>
 
-  <!-- Right Pixel Matrix Generative Graphic -->
-  <g transform="translate(340, 20)">
+  <!-- Right Pixel Matrix Generative Graphic (Shifted to x=430 so name text never overlaps) -->
+  <g transform="translate(430, 20)">
     <!-- Row 0 -->
     <rect x="0" y="0" width="14" height="14" fill="#2ea043" rx="1"/>
     <rect x="18" y="0" width="14" height="14" fill="#238636" rx="1"/>
@@ -29,10 +29,6 @@
     <rect x="342" y="0" width="14" height="14" fill="#2ea043" rx="1"/>
     <rect x="360" y="0" width="14" height="14" fill="#238636" rx="1"/>
     <rect x="378" y="0" width="14" height="14" fill="#0e4429" rx="1"/>
-    <rect x="396" y="0" width="14" height="14" fill="#3fb950" rx="1"/>
-    <rect x="414" y="0" width="14" height="14" fill="#2ea043" rx="1"/>
-    <rect x="432" y="0" width="14" height="14" fill="#ffffff" opacity="0.8" rx="1"/>
-    <rect x="450" y="0" width="14" height="14" fill="#238636" rx="1"/>
 
     <!-- Row 1 -->
     <rect x="0" y="18" width="14" height="14" fill="#3fb950" rx="1"/>
@@ -57,10 +53,6 @@
     <rect x="342" y="18" width="14" height="14" fill="#3fb950" rx="1"/>
     <rect x="360" y="18" width="14" height="14" fill="#2ea043" rx="1"/>
     <rect x="378" y="18" width="14" height="14" fill="#0e4429" rx="1"/>
-    <rect x="396" y="18" width="14" height="14" fill="#238636" rx="1"/>
-    <rect x="414" y="18" width="14" height="14" fill="#3fb950" rx="1"/>
-    <rect x="432" y="18" width="14" height="14" fill="#2ea043" rx="1"/>
-    <rect x="450" y="18" width="14" height="14" fill="#0e4429" rx="1"/>
 
     <!-- Row 2 -->
     <rect x="0" y="36" width="14" height="14" fill="#238636" rx="1"/>
@@ -85,10 +77,6 @@
     <rect x="342" y="36" width="14" height="14" fill="#238636" rx="1"/>
     <rect x="360" y="36" width="14" height="14" fill="#3fb950" rx="1"/>
     <rect x="378" y="36" width="14" height="14" fill="#2ea043" rx="1"/>
-    <rect x="396" y="36" width="14" height="14" fill="#0e4429" rx="1"/>
-    <rect x="414" y="36" width="14" height="14" fill="#ffffff" opacity="0.7" rx="1"/>
-    <rect x="432" y="36" width="14" height="14" fill="#238636" rx="1"/>
-    <rect x="450" y="36" width="14" height="14" fill="#3fb950" rx="1"/>
 
     <!-- Row 3 -->
     <rect x="0" y="54" width="14" height="14" fill="#0e4429" rx="1"/>
@@ -113,10 +101,6 @@
     <rect x="342" y="54" width="14" height="14" fill="#2ea043" rx="1"/>
     <rect x="360" y="54" width="14" height="14" fill="#0e4429" rx="1"/>
     <rect x="378" y="54" width="14" height="14" fill="#238636" rx="1"/>
-    <rect x="396" y="54" width="14" height="14" fill="#3fb950" rx="1"/>
-    <rect x="414" y="54" width="14" height="14" fill="#2ea043" rx="1"/>
-    <rect x="432" y="54" width="14" height="14" fill="#0e4429" rx="1"/>
-    <rect x="450" y="54" width="14" height="14" fill="#ffffff" opacity="0.9" rx="1"/>
 
     <!-- Row 4 -->
     <rect x="0" y="72" width="14" height="14" fill="#2ea043" rx="1"/>
@@ -141,10 +125,6 @@
     <rect x="342" y="72" width="14" height="14" fill="#2ea043" rx="1"/>
     <rect x="360" y="72" width="14" height="14" fill="#0e4429" rx="1"/>
     <rect x="378" y="72" width="14" height="14" fill="#ffffff" opacity="0.85" rx="1"/>
-    <rect x="396" y="72" width="14" height="14" fill="#238636" rx="1"/>
-    <rect x="414" y="72" width="14" height="14" fill="#3fb950" rx="1"/>
-    <rect x="432" y="72" width="14" height="14" fill="#2ea043" rx="1"/>
-    <rect x="450" y="72" width="14" height="14" fill="#0e4429" rx="1"/>
 
     <!-- Row 5 -->
     <rect x="0" y="90" width="14" height="14" fill="#3fb950" rx="1"/>
@@ -169,12 +149,8 @@
     <rect x="342" y="90" width="14" height="14" fill="#238636" rx="1"/>
     <rect x="360" y="90" width="14" height="14" fill="#3fb950" rx="1"/>
     <rect x="378" y="90" width="14" height="14" fill="#2ea043" rx="1"/>
-    <rect x="396" y="90" width="14" height="14" fill="#0e4429" rx="1"/>
-    <rect x="414" y="90" width="14" height="14" fill="#238636" rx="1"/>
-    <rect x="432" y="90" width="14" height="14" fill="#3fb950" rx="1"/>
-    <rect x="450" y="90" width="14" height="14" fill="#ffffff" opacity="0.7" rx="1"/>
   </g>
 
   <!-- Bottom Right Subtitle Text -->
-  <text x="815" y="175" font-family="'Courier New', Courier, monospace" font-size="14" font-weight="700" fill="#3fb950" letter-spacing="2" text-anchor="end">JAVA BACKEND &amp; PLATFORM ENGINEER</text>
+  <text x="820" y="175" font-family="'Courier New', Courier, monospace" font-size="14" font-weight="700" fill="#3fb950" letter-spacing="2" text-anchor="end">JAVA BACKEND &amp; PLATFORM ENGINEER</text>
 </svg>
