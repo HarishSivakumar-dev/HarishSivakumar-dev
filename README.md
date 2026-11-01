@@ -14,18 +14,18 @@
 
 <br />
 
-## About <sub><code>offset 0</code></sub>
+## About
 
 I build the parts of a product nobody notices until they fail: services, queues, auth, and the data paths between them. I work in Java and Spring Boot, reaching for Kafka when services shouldn't wait on each other and Redis when a database shouldn't be asked twice. Lately that work has extended into retrieval, with RAG pipelines over vector search.
 
 Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
 
-## Now <sub><code>offset 1</code></sub>
+## Now
 
 - **[Tick-It](https://github.com/HarishSivakumar-dev/Tick-It):** a Kafka-backed microservices platform that makes ticket escalation and prioritization first-class workflows.
 - **[Portal Downtime & Latency Analytics](https://github.com/HarishSivakumar-dev/Portal-Downtime-Latency-Analytics-Tool):** a tool for tracking portal downtime and latency, in its early stages.
 
-## Stack <sub><code>offset 2</code></sub>
+## Stack
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg" />
@@ -33,7 +33,7 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
   <img src="./assets/stack-light.svg" alt="Core: Java, Spring Boot, Hibernate, Spring Security, Spring Cloud. Events and data: Kafka, Redis, PostgreSQL, MySQL, pgvector, WebSockets. AI and auth: Spring AI, Gemini, RAG, OAuth2, JWT, RBAC. Infra: Docker, AWS, Nginx, Git, GitHub." width="100%" />
 </picture>
 
-## Projects <sub><code>offset 3</code></sub>
+## Projects
 
 <a href="https://github.com/HarishSivakumar-dev/Tick-It"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-Tick-It-dark.svg" />
@@ -56,7 +56,7 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
   <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-JWT-Based-RBAC-and-Refresh-Tokens-light.svg" alt="JWT RBAC and Refresh Tokens: role-based access control with Spring Security." width="49%" />
 </picture></a>
 
-## Metrics <sub><code>offset 4</code></sub>
+## Metrics
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/stats-dark.svg" />
@@ -74,7 +74,7 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
   <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/streak-light.svg" alt="Contribution streaks over the last 12 months." width="98.5%" />
 </picture>
 
-## Contribution log <sub><code>offset 5</code></sub>
+## Contribution log
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/snake-dark.svg" />
@@ -82,7 +82,7 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
   <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/snake-light.svg" alt="Animation of a snake eating the contribution graph." width="100%" />
 </picture>
 
-## Connect <sub><code>offset 6</code></sub>
+## Connect
 
 [LinkedIn](https://www.linkedin.com/in/harishsivakumar07/) &nbsp;/&nbsp; [Portfolio](https://harish-developer-portfolio-lac.vercel.app) &nbsp;/&nbsp; [GitHub](https://github.com/HarishSivakumar-dev)
 
