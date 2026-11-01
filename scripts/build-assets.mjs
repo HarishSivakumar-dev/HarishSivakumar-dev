@@ -13,12 +13,11 @@ const SPRING = 'https://spring.io/img/projects';
 const SIMPLE = 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons';
 const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons';
 
-const ICONIFY = 'https://api.iconify.design';
 const onTile = (mode) => (mode === 'dark' ? '#FFFFFF' : '#000000');
 
-// Item kinds: `skill` is a ready-made skillicons tile (`badge` marks it as a variant); `url` is
-// a logo placed on a matching tile (`paint` recolours it). pgvector, RAG and RBAC have no
-// official logo, so they use a badged Postgres tile and generic Tabler symbols.
+// Item kinds: `skill` is a ready-made skillicons tile; `url` is a logo placed on a matching
+// tile (`paint` recolours it). Items with neither have no official logo and render as a text
+// chip; keep them last in a lane so the logos stay on one grid.
 const STACK = [
   {
     lane: 'core',
@@ -37,12 +36,8 @@ const STACK = [
       { name: 'Redis', skill: 'redis' },
       { name: 'PostgreSQL', skill: 'postgres' },
       { name: 'MySQL', skill: 'mysql' },
-      { name: 'pgvector', skill: 'postgres', badge: true },
-      {
-        name: 'WebSockets',
-        url: `${ICONIFY}/logos/websocket.svg`,
-        paint: (svg, mode) => svg.replace('#231f20', onTile(mode)),
-      },
+      { name: 'pgvector' },
+      { name: 'WebSockets' },
     ],
   },
   {
@@ -50,10 +45,10 @@ const STACK = [
     items: [
       { name: 'Spring AI', url: `${SPRING}/spring-ai.svg` },
       { name: 'Gemini', url: `${SIMPLE}/googlegemini.svg`, paint: (svg) => svg.replace('<svg', '<svg fill="#8E75B2"') },
-      { name: 'RAG', url: `${ICONIFY}/tabler/file-search.svg`, paint: (svg, _, t) => svg.replaceAll('currentColor', t.stream) },
       { name: 'OAuth2', url: `${DEVICON}/oauth/oauth-original.svg` },
       { name: 'JWT', url: `${SIMPLE}/jsonwebtokens.svg`, paint: (svg, mode) => svg.replace('<svg', `<svg fill="${onTile(mode)}"`) },
-      { name: 'RBAC', url: `${ICONIFY}/tabler/user-shield.svg`, paint: (svg, _, t) => svg.replaceAll('currentColor', t.stream) },
+      { name: 'RAG' },
+      { name: 'RBAC' },
     ],
   },
   {
@@ -90,11 +85,7 @@ async function tile(item, x, y, t, mode, delay) {
   const open = `<g class="node" style="animation-delay:${delay}s" transform-origin="${x} ${y}">`;
   if (item.skill) {
     const href = dataUri(await fetchText(`https://skillicons.dev/icons?i=${item.skill}&theme=${mode}`));
-    // Arrow badge: the Postgres tile with this mark stands for pgvector.
-    const badge = item.badge
-      ? `<circle cx="${x + 39}" cy="${y + 39}" r="10" fill="${t.stream}" stroke="${TILE[mode]}" stroke-width="2"/><path d="M${x + 35} ${y + 43}l8-8m-5 0h5v5" fill="none" stroke="${TILE[mode]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`
-      : '';
-    return `${open}<image href="${href}" x="${x}" y="${y}" width="48" height="48"/>${badge}</g>\n`;
+    return `${open}<image href="${href}" x="${x}" y="${y}" width="48" height="48"/></g>\n`;
   }
   const base = `<rect x="${x}" y="${y}" width="48" height="48" rx="11" fill="${TILE[mode]}"/>`;
   let svg = await fetchText(item.url);
@@ -175,8 +166,16 @@ async function stack(t, mode) {
 <line x1="150" y1="${mid}" x2="${W - 4}" y2="${mid}" stroke="${t.border}" stroke-width="1.5"/>
 <rect class="pulse" x="150" y="${mid - 1.5}" width="70" height="3" rx="1.5" fill="${t.signal}" style="animation-delay:${delay}s"/>\n`;
 
+    let x = 168;
     for (const [i, item] of items.entries()) {
-      body += await tile(item, 168 + i * 62, mid - 24, t, mode, (delay + i * 0.5).toFixed(1));
+      if (item.skill || item.url) {
+        body += await tile(item, x, mid - 24, t, mode, (delay + i * 0.5).toFixed(1));
+        x += 62;
+      } else {
+        const w = item.name.length * 7.6 + 24;
+        body += `<rect x="${x}" y="${mid - 15}" width="${w}" height="30" rx="6" fill="${t.surface}" stroke="${t.border}"/><text x="${x + w / 2}" y="${mid + 4.5}" text-anchor="middle" class="chip">${esc(item.name)}</text>\n`;
+        x += w + 10;
+      }
     }
   }
 
@@ -184,6 +183,7 @@ async function stack(t, mode) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)}">
 <style>
   .lane { font: 600 13px ${MONO}; fill: ${t.muted}; }
+  .chip { font: 400 12.5px ${MONO}; fill: ${t.text}; }
   .pulse { opacity: 0; animation: sweep ${CYCLE}s ease-in-out infinite; }
   @keyframes sweep {
     0% { transform: translateX(0); opacity: 0; }
