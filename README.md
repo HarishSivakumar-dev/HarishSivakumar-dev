@@ -82,6 +82,14 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
   <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/snake-light.svg" alt="Animation of a snake eating the contribution graph." width="100%" />
 </picture>
 
+## Currently listening
+
+<a href="https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/now-playing-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/now-playing-light.svg" />
+  <img src="./assets/now-playing-light.svg" alt="On repeat: Lana Del Rey. Video Games, Summertime Sadness, Young and Beautiful, West Coast, Cinnamon Girl. Opens on Spotify." width="100%" />
+</picture></a>
+
 ## Connect
 
 [LinkedIn](https://www.linkedin.com/in/harishsivakumar07/) &nbsp;/&nbsp; [Portfolio](https://harish-developer-portfolio-lac.vercel.app) &nbsp;/&nbsp; [GitHub](https://github.com/HarishSivakumar-dev)
@@ -91,5 +99,5 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg" />
-  <img src="./assets/footer-light.svg" alt="End of log. Consumer lag: 0." width="100%" />
+  <img src="./assets/footer-light.svg" alt="End of log. Thanks for reading." width="100%" />
 </picture>

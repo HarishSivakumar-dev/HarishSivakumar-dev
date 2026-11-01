@@ -9,12 +9,97 @@ import { themes, MONO, SANS, esc } from './theme.mjs';
 
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'assets');
 
+const SPRING = 'https://spring.io/img/projects';
+const SIMPLE = 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons';
+const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons';
+
+// Item kinds: `skill` is a ready-made skillicons tile; `url` is a logo placed on a matching
+// tile (`fill` tints monochrome logos); `glyph` is drawn here for the things with no official
+// logo, and carries a caption because a generic symbol can't identify itself.
 const STACK = [
-  { lane: 'core', icons: ['java', 'spring', 'hibernate'], chips: ['Spring Security', 'Spring Cloud'] },
-  { lane: 'events + data', icons: ['kafka', 'redis', 'postgres', 'mysql'], chips: ['pgvector', 'WebSockets'] },
-  { lane: 'ai + auth', icons: [], chips: ['Spring AI', 'Gemini', 'RAG', 'OAuth2', 'JWT', 'RBAC'] },
-  { lane: 'infra', icons: ['docker', 'aws', 'nginx', 'git', 'github'], chips: [] },
+  {
+    lane: 'core',
+    items: [
+      { name: 'Java', skill: 'java' },
+      { name: 'Spring Boot', skill: 'spring' },
+      { name: 'Hibernate', skill: 'hibernate' },
+      { name: 'Spring Security', url: `${SPRING}/spring-security.svg` },
+      { name: 'Spring Cloud', url: `${SPRING}/spring-cloud.svg` },
+    ],
+  },
+  {
+    lane: 'events + data',
+    items: [
+      { name: 'Kafka', skill: 'kafka' },
+      { name: 'Redis', skill: 'redis' },
+      { name: 'PostgreSQL', skill: 'postgres' },
+      { name: 'MySQL', skill: 'mysql' },
+      { name: 'pgvector', glyph: 'vector', caption: 'pgvector' },
+      { name: 'WebSockets', glyph: 'duplex', caption: 'ws' },
+    ],
+  },
+  {
+    lane: 'ai + auth',
+    items: [
+      { name: 'Spring AI', url: `${SPRING}/spring-ai.svg` },
+      { name: 'Gemini', url: `${SIMPLE}/googlegemini.svg`, fill: () => '#8E75B2' },
+      { name: 'RAG', glyph: 'retrieve', caption: 'RAG' },
+      { name: 'OAuth2', url: `${DEVICON}/oauth/oauth-original.svg` },
+      { name: 'JWT', url: `${SIMPLE}/jsonwebtokens.svg`, fill: (mode) => (mode === 'dark' ? '#FFFFFF' : '#000000') },
+      { name: 'RBAC', glyph: 'roles', caption: 'RBAC' },
+    ],
+  },
+  {
+    lane: 'infra',
+    items: [
+      { name: 'Docker', skill: 'docker' },
+      { name: 'AWS', skill: 'aws' },
+      { name: 'Nginx', skill: 'nginx' },
+      { name: 'Git', skill: 'git' },
+      { name: 'GitHub', skill: 'github' },
+    ],
+  },
 ];
+
+// Same tile colours as skillicons, so custom tiles sit flush beside its icons.
+const TILE = { dark: '#242938', light: '#F4F2ED' };
+
+const GLYPHS = {
+  vector: '<path d="M14 31V13M14 31H34M14 31L30 15M30 15h-6M30 15v6"/>',
+  duplex: '<path d="M12 17H36M31 12l5 5-5 5M36 27H12M17 22l-5 5 5 5"/>',
+  retrieve: '<path d="M13 10h13l5 5v7M26 10v5h5M13 10v23h9"/><circle cx="29" cy="28" r="5"/><path d="M33 32l4 4"/>',
+  roles: '<circle cx="24" cy="15" r="5"/><path d="M14 33c0-6 4-10 10-10s10 4 10 10"/>',
+};
+
+async function fetchText(url) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`${url}: HTTP ${res.status}`);
+      return await res.text();
+    } catch (err) {
+      if (attempt === 4) throw err;
+      await new Promise((resolve) => setTimeout(resolve, attempt * 1500));
+    }
+  }
+}
+
+const dataUri = (svg) => `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`;
+
+async function tile(item, x, y, t, mode, delay) {
+  const open = `<g class="node" style="animation-delay:${delay}s" transform-origin="${x} ${y}">`;
+  if (item.skill) {
+    const href = dataUri(await fetchText(`https://skillicons.dev/icons?i=${item.skill}&theme=${mode}`));
+    return `${open}<image href="${href}" x="${x}" y="${y}" width="48" height="48"/></g>\n`;
+  }
+  const base = `<rect x="${x}" y="${y}" width="48" height="48" rx="11" fill="${TILE[mode]}"/>`;
+  if (item.glyph) {
+    return `${open}${base}<g transform="translate(${x} ${y})" fill="none" stroke="${t.stream}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform-origin="0 0"><g transform="translate(6.5 0) scale(0.73)">${GLYPHS[item.glyph]}</g></g><text x="${x + 24}" y="${y + 43}" text-anchor="middle" class="cap">${esc(item.caption)}</text></g>\n`;
+  }
+  let svg = await fetchText(item.url);
+  if (item.fill) svg = svg.replace('<svg', `<svg fill="${item.fill(mode)}"`);
+  return `${open}${base}<image href="${dataUri(svg)}" x="${x + 8}" y="${y + 8}" width="32" height="32"/></g>\n`;
+}
 
 const motionCss = `
 @media (prefers-reduced-motion: reduce) {
@@ -74,19 +159,6 @@ ${packet(paths[0], 0)}${packet(paths[1], 1.5)}${packet(paths[2], 0.75)}${packet(
 </svg>`;
 }
 
-async function iconUri(name, mode) {
-  for (let attempt = 1; ; attempt++) {
-    try {
-      const res = await fetch(`https://skillicons.dev/icons?i=${name}&theme=${mode}`);
-      if (!res.ok) throw new Error(`skillicons ${name}: HTTP ${res.status}`);
-      return `data:image/svg+xml;base64,${Buffer.from(await res.text()).toString('base64')}`;
-    } catch (err) {
-      if (attempt === 4) throw err;
-      await new Promise((resolve) => setTimeout(resolve, attempt * 1500));
-    }
-  }
-}
-
 async function stack(t, mode) {
   const LANE_H = 76;
   const W = 900;
@@ -94,7 +166,7 @@ async function stack(t, mode) {
   const CYCLE = 8;
   let body = '';
 
-  for (const [li, { lane, icons, chips }] of STACK.entries()) {
+  for (const [li, { lane, items }] of STACK.entries()) {
     const y = 8 + li * LANE_H;
     const mid = y + 32;
     const delay = li * 0.6;
@@ -102,24 +174,16 @@ async function stack(t, mode) {
 <line x1="150" y1="${mid}" x2="${W - 4}" y2="${mid}" stroke="${t.border}" stroke-width="1.5"/>
 <rect class="pulse" x="150" y="${mid - 1.5}" width="70" height="3" rx="1.5" fill="${t.signal}" style="animation-delay:${delay}s"/>\n`;
 
-    let x = 168;
-    for (const [i, name] of icons.entries()) {
-      const href = await iconUri(name, mode);
-      body += `<image class="node" href="${href}" x="${x}" y="${mid - 24}" width="48" height="48" style="animation-delay:${(delay + i * 0.5).toFixed(1)}s"/>\n`;
-      x += 62;
-    }
-    for (const chip of chips) {
-      const w = chip.length * 7.6 + 24;
-      body += `<g><rect x="${x}" y="${mid - 15}" width="${w}" height="30" rx="6" fill="${t.surface}" stroke="${t.border}"/><text x="${x + w / 2}" y="${mid + 4.5}" text-anchor="middle" class="chip">${esc(chip)}</text></g>\n`;
-      x += w + 10;
+    for (const [i, item] of items.entries()) {
+      body += await tile(item, 168 + i * 62, mid - 24, t, mode, (delay + i * 0.5).toFixed(1));
     }
   }
 
-  const label = STACK.map((l) => `${l.lane}: ${[...l.icons, ...l.chips].join(', ')}`).join('. ');
+  const label = STACK.map((l) => `${l.lane}: ${l.items.map((i) => i.name).join(', ')}`).join('. ');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)}">
 <style>
   .lane { font: 600 13px ${MONO}; fill: ${t.muted}; }
-  .chip { font: 400 12.5px ${MONO}; fill: ${t.text}; }
+  .cap { font: 400 8.5px ${MONO}; fill: ${t.muted}; }
   .pulse { opacity: 0; animation: sweep ${CYCLE}s ease-in-out infinite; }
   @keyframes sweep {
     0% { transform: translateX(0); opacity: 0; }
@@ -138,19 +202,82 @@ async function stack(t, mode) {
 ${body}</svg>`;
 }
 
-function footer(t) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 70" role="img" aria-label="End of log. Consumer caught up, lag zero.">
+const TRACKS = ['Video Games', 'Summertime Sadness', 'Young and Beautiful', 'West Coast', 'Cinnamon Girl'];
+
+// A README can't play audio, so this is a looping display card that links out to Spotify.
+async function nowPlaying(t, mode) {
+  const GREEN = mode === 'dark' ? '#1DB954' : '#15803D';
+  const PER_TRACK = 6;
+  const logo = (await fetchText(`${SIMPLE}/spotify.svg`)).replace('<svg', `<svg fill="${GREEN}"`);
+  const bars = [0, 1, 2, 3, 4]
+    .map(
+      (i) =>
+        `<rect class="bar" x="${816 + i * 10}" y="34" width="6" height="32" rx="1.5" fill="${GREEN}" style="animation-delay:-${(i * 0.37).toFixed(2)}s;animation-duration:${(1 + (i % 3) * 0.25).toFixed(2)}s"/>`
+    )
+    .join('');
+  const titles = TRACKS.map(
+    (name, i) =>
+      `<text class="title${i === 0 ? ' first' : ''}" x="108" y="53" style="animation-delay:${i * PER_TRACK}s">${esc(name)}</text>`
+  ).join('');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 112" role="img" aria-label="On repeat: Lana Del Rey. ${esc(TRACKS.join(', '))}. Opens on Spotify.">
 <style>
-  .end { font: 400 13px ${MONO}; fill: ${t.muted}; }
-  .run { stroke-dasharray: 6 10; animation: flow 3s linear infinite; }
-  @keyframes flow { to { stroke-dashoffset: -64; } }
-  .dot { animation: blink 3s ease-in-out infinite; }
-  @keyframes blink { 50% { opacity: 0.25; } }
+  .kicker { font: 600 11px ${MONO}; fill: ${t.muted}; letter-spacing: 1px; }
+  .title { font: 600 19px ${SANS}; fill: ${t.text}; opacity: 0; animation: track ${TRACKS.length * PER_TRACK}s linear infinite; }
+  .artist { font: 400 13px ${SANS}; fill: ${t.muted}; }
+  @keyframes track { 0% { opacity: 0; } 2%, 18% { opacity: 1; } 20%, 100% { opacity: 0; } }
+  .progress { transform-box: fill-box; transform-origin: left; animation: play ${PER_TRACK}s linear infinite; }
+  @keyframes play { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .bar { transform-box: fill-box; transform-origin: bottom; animation: eq 1s ease-in-out infinite alternate; }
+  @keyframes eq { from { transform: scaleY(0.2); } to { transform: scaleY(1); } }
+  ${motionCss}
+  @media (prefers-reduced-motion: reduce) { .first { opacity: 1; } .progress { transform: scaleX(0.4); } }
+</style>
+<rect x="0.5" y="0.5" width="899" height="111" rx="8" fill="${t.surface}" stroke="${t.border}"/>
+<image href="${dataUri(logo)}" x="28" y="28" width="56" height="56"/>
+<text x="108" y="28" class="kicker">ON REPEAT</text>
+${titles}
+<text x="108" y="73" class="artist">Lana Del Rey</text>
+<rect x="108" y="86" width="670" height="3" rx="1.5" fill="${t.border}"/>
+<rect class="progress" x="108" y="86" width="670" height="3" rx="1.5" fill="${GREEN}"/>
+${bars}
+</svg>`;
+}
+
+// Two streams drain into one final committed event, which settles the page.
+function footer(t) {
+  const left = 'M60 26H450';
+  const right = 'M840 26H450';
+  const drop = (d, delay) =>
+    `<circle class="packet" r="3" fill="${t.signal}" style="offset-path:path('${d}');animation-delay:${delay}s"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 84" role="img" aria-label="End of log. Thanks for reading.">
+<style>
+  .end { font: 400 12.5px ${MONO}; fill: ${t.muted}; }
+  .packet { opacity: 0; animation: drain 5s ease-in infinite; }
+  @keyframes drain {
+    0% { offset-distance: 0%; opacity: 0; }
+    15% { opacity: 1; }
+    60% { offset-distance: 100%; opacity: 1; }
+    64%, 100% { offset-distance: 100%; opacity: 0; }
+  }
+  .halo { transform-box: fill-box; transform-origin: center; animation: ring 5s ease-out infinite; opacity: 0; }
+  @keyframes ring {
+    0%, 60% { transform: scale(0.4); opacity: 0; }
+    64% { opacity: 0.6; }
+    90%, 100% { transform: scale(2.4); opacity: 0; }
+  }
   ${motionCss}
 </style>
-<line class="run" x1="4" y1="20" x2="896" y2="20" stroke="${t.stream}" stroke-width="2"/>
-<circle class="dot" cx="306" cy="50" r="4" fill="${t.signal}"/>
-<text x="320" y="55" class="end">end of log / consumer lag: 0</text>
+<defs>
+  <linearGradient id="fadeL"><stop offset="0" stop-color="${t.border}" stop-opacity="0"/><stop offset="1" stop-color="${t.border}"/></linearGradient>
+  <linearGradient id="fadeR"><stop offset="0" stop-color="${t.border}"/><stop offset="1" stop-color="${t.border}" stop-opacity="0"/></linearGradient>
+</defs>
+<rect x="60" y="25" width="380" height="2" fill="url(#fadeL)"/>
+<rect x="460" y="25" width="380" height="2" fill="url(#fadeR)"/>
+${drop(left, 0)}${drop(right, 0)}
+<circle class="halo" cx="450" cy="26" r="7" fill="none" stroke="${t.stream}" stroke-width="1.5"/>
+<circle cx="450" cy="26" r="5" fill="${t.stream}"/>
+<text x="450" y="66" text-anchor="middle" class="end">end of log / thanks for reading</text>
 </svg>`;
 }
 
@@ -158,6 +285,7 @@ await mkdir(OUT, { recursive: true });
 for (const [mode, t] of Object.entries(themes)) {
   await writeFile(join(OUT, `header-${mode}.svg`), header(t));
   await writeFile(join(OUT, `stack-${mode}.svg`), await stack(t, mode));
+  await writeFile(join(OUT, `now-playing-${mode}.svg`), await nowPlaying(t, mode));
   await writeFile(join(OUT, `footer-${mode}.svg`), footer(t));
 }
 console.log('assets written to', OUT);

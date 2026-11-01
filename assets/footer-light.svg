@@ -1,17 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 70" role="img" aria-label="End of log. Consumer caught up, lag zero.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 84" role="img" aria-label="End of log. Thanks for reading.">
 <style>
-  .end { font: 400 13px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #57606A; }
-  .run { stroke-dasharray: 6 10; animation: flow 3s linear infinite; }
-  @keyframes flow { to { stroke-dashoffset: -64; } }
-  .dot { animation: blink 3s ease-in-out infinite; }
-  @keyframes blink { 50% { opacity: 0.25; } }
+  .end { font: 400 12.5px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #57606A; }
+  .packet { opacity: 0; animation: drain 5s ease-in infinite; }
+  @keyframes drain {
+    0% { offset-distance: 0%; opacity: 0; }
+    15% { opacity: 1; }
+    60% { offset-distance: 100%; opacity: 1; }
+    64%, 100% { offset-distance: 100%; opacity: 0; }
+  }
+  .halo { transform-box: fill-box; transform-origin: center; animation: ring 5s ease-out infinite; opacity: 0; }
+  @keyframes ring {
+    0%, 60% { transform: scale(0.4); opacity: 0; }
+    64% { opacity: 0.6; }
+    90%, 100% { transform: scale(2.4); opacity: 0; }
+  }
   
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; }
   .packet { display: none; }
 }
 </style>
-<line class="run" x1="4" y1="20" x2="896" y2="20" stroke="#0F766E" stroke-width="2"/>
-<circle class="dot" cx="306" cy="50" r="4" fill="#B45309"/>
-<text x="320" y="55" class="end">end of log / consumer lag: 0</text>
+<defs>
+  <linearGradient id="fadeL"><stop offset="0" stop-color="#D0D7DE" stop-opacity="0"/><stop offset="1" stop-color="#D0D7DE"/></linearGradient>
+  <linearGradient id="fadeR"><stop offset="0" stop-color="#D0D7DE"/><stop offset="1" stop-color="#D0D7DE" stop-opacity="0"/></linearGradient>
+</defs>
+<rect x="60" y="25" width="380" height="2" fill="url(#fadeL)"/>
+<rect x="460" y="25" width="380" height="2" fill="url(#fadeR)"/>
+<circle class="packet" r="3" fill="#B45309" style="offset-path:path('M60 26H450');animation-delay:0s"/><circle class="packet" r="3" fill="#B45309" style="offset-path:path('M840 26H450');animation-delay:0s"/>
+<circle class="halo" cx="450" cy="26" r="7" fill="none" stroke="#0F766E" stroke-width="1.5"/>
+<circle cx="450" cy="26" r="5" fill="#0F766E"/>
+<text x="450" y="66" text-anchor="middle" class="end">end of log / thanks for reading</text>
 </svg>
