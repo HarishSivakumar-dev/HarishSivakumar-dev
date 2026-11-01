@@ -35,6 +35,7 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
 
 ## Projects
 
+<p>
 <a href="https://github.com/HarishSivakumar-dev/Tick-It"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-Tick-It-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-Tick-It-light.svg" />
@@ -55,6 +56,7 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-JWT-Based-RBAC-and-Refresh-Tokens-light.svg" />
   <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-JWT-Based-RBAC-and-Refresh-Tokens-light.svg" alt="JWT RBAC and Refresh Tokens: role-based access control with Spring Security." width="49%" />
 </picture></a>
+</p>
 
 ## Metrics
 
@@ -84,11 +86,13 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
 
 ## Currently listening
 
+<p>
 <a href="https://harishsivakumar-dev.github.io/HarishSivakumar-dev/"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/now-playing-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/now-playing-light.svg" />
   <img src="./assets/now-playing-light.svg" alt="On repeat: Lana Del Rey. Video Games, Summertime Sadness, Young and Beautiful, West Coast, Cinnamon Girl. Click to open the player." width="100%" />
 </picture></a>
+</p>
 
 ## Connect
 
