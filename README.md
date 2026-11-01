@@ -1,81 +1,95 @@
 <div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg" />
+    <img src="./assets/header-light.svg" alt="Harish Sivakumar. Backend developer building event-driven systems with Java, Spring Boot and Kafka." width="100%" />
+  </picture>
 
-  <!-- 01 Header Terminal Card -->
-  <img src="./assets/01_header_terminal.svg" alt="macOS Terminal System Overview" width="100%" />
-
-  <br /><br />
-
-  <!-- 02 Technical Stack Terminal Card -->
-  <img src="./assets/02_stack_terminal.svg" alt="macOS Terminal Backend Stack" width="100%" />
-
-  <br /><br />
-
-  <!-- 02b Visual Tech Icons Terminal Grid -->
-  <img src="./assets/02b_tech_icons_terminal.svg" alt="macOS Terminal Visual Tech Icons" width="100%" />
-
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2800&pause=1400&color=2DD4BF&center=true&vCenter=true&width=640&height=30&lines=consume(microservices).commit();consume(event-streams).commit();consume(rag-pipelines).commit();consume(secure-apis).commit()" />
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2800&pause=1400&color=0F766E&center=true&vCenter=true&width=640&height=30&lines=consume(microservices).commit();consume(event-streams).commit();consume(rag-pipelines).commit();consume(secure-apis).commit()" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2800&pause=1400&color=0F766E&center=true&vCenter=true&width=640&height=30&lines=consume(microservices).commit();consume(event-streams).commit();consume(rag-pipelines).commit();consume(secure-apis).commit()" alt="Focus areas: microservices, event streams, RAG pipelines, secure APIs." />
+  </picture>
 </div>
 
 <br />
 
-### `> VISUAL TECH TOOLKIT`
+## About <sub><code>offset 0</code></sub>
 
-<p align="left">
-  <a href="#">
-    <img src="https://skillicons.dev/icons?i=java,spring,postgres,mysql,redis,kafka,docker,aws,nginx,git,github" alt="Developer Tech Icons Grid" />
-  </a>
-</p>
+I build the parts of a product nobody notices until they fail: services, queues, auth, and the data paths between them. I work in Java and Spring Boot, reaching for Kafka when services shouldn't wait on each other and Redis when a database shouldn't be asked twice. Lately that work has extended into retrieval, with RAG pipelines over vector search.
+
+Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
+
+## Now <sub><code>offset 1</code></sub>
+
+- **[Tick-It](https://github.com/HarishSivakumar-dev/Tick-It):** a Kafka-backed microservices platform that makes ticket escalation and prioritization first-class workflows.
+- **[Portal Downtime & Latency Analytics](https://github.com/HarishSivakumar-dev/Portal-Downtime-Latency-Analytics-Tool):** a tool for tracking portal downtime and latency, in its early stages.
+
+## Stack <sub><code>offset 2</code></sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg" />
+  <img src="./assets/stack-light.svg" alt="Core: Java, Spring Boot, Hibernate, Spring Security, Spring Cloud. Events and data: Kafka, Redis, PostgreSQL, MySQL, pgvector, WebSockets. AI and auth: Spring AI, Gemini, RAG, OAuth2, JWT, RBAC. Infra: Docker, AWS, Nginx, Git, GitHub." width="100%" />
+</picture>
+
+## Projects <sub><code>offset 3</code></sub>
+
+<a href="https://github.com/HarishSivakumar-dev/Tick-It"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-Tick-It-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-Tick-It-light.svg" />
+  <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-Tick-It-light.svg" alt="Tick-It: event-driven ticketing with Spring Boot and Kafka." width="49%" />
+</picture></a>
+<a href="https://github.com/HarishSivakumar-dev/SkillSprint"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-SkillSprint-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-SkillSprint-light.svg" />
+  <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-SkillSprint-light.svg" alt="SkillSprint: corporate learning platform built with Spring Boot." width="49%" />
+</picture></a>
+<a href="https://github.com/HarishSivakumar-dev/PersonalChatBot"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-PersonalChatBot-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-PersonalChatBot-light.svg" />
+  <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-PersonalChatBot-light.svg" alt="PersonalChatBot: RAG chatbot using Spring AI, Phi and Qdrant." width="49%" />
+</picture></a>
+<a href="https://github.com/HarishSivakumar-dev/JWT-Based-RBAC-and-Refresh-Tokens"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-JWT-Based-RBAC-and-Refresh-Tokens-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-JWT-Based-RBAC-and-Refresh-Tokens-light.svg" />
+  <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/project-JWT-Based-RBAC-and-Refresh-Tokens-light.svg" alt="JWT RBAC and Refresh Tokens: role-based access control with Spring Security." width="49%" />
+</picture></a>
+
+## Metrics <sub><code>offset 4</code></sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/stats-light.svg" />
+  <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/stats-light.svg" alt="GitHub activity over the last 12 months." width="49%" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/languages-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/languages-light.svg" />
+  <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/languages-light.svg" alt="Top languages across public repositories." width="49%" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/streak-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/streak-light.svg" />
+  <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/streak-light.svg" alt="Contribution streaks over the last 12 months." width="98.5%" />
+</picture>
+
+## Contribution log <sub><code>offset 5</code></sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/snake-light.svg" />
+  <img src="https://raw.githubusercontent.com/HarishSivakumar-dev/HarishSivakumar-dev/output/snake-light.svg" alt="Animation of a snake eating the contribution graph." width="100%" />
+</picture>
+
+## Connect <sub><code>offset 6</code></sub>
+
+[LinkedIn](https://www.linkedin.com/in/harishsivakumar07/) &nbsp;/&nbsp; [Portfolio](https://harish-developer-portfolio-lac.vercel.app) &nbsp;/&nbsp; [GitHub](https://github.com/HarishSivakumar-dev)
 
 <br />
 
-#### Languages & Core Frameworks
-<p align="left">
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white" alt="Spring Security" />
-  <img src="https://img.shields.io/badge/Spring_Cloud-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring Cloud" />
-  <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" alt="Hibernate" />
-</p>
-
-#### Messaging, Storage & Databases
-<p align="left">
-  <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/pgvector-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="pgvector" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-</p>
-
-#### AI, Protocols & Security
-<p align="left">
-  <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Google Gemini" />
-  <img src="https://img.shields.io/badge/Spring_AI-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring AI" />
-  <img src="https://img.shields.io/badge/OAuth2-EB5424?style=for-the-badge&logo=auth0&logoColor=white" alt="OAuth2" />
-  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT" />
-  <img src="https://img.shields.io/badge/WebSockets-010101?style=for-the-badge&logo=socketdotio&logoColor=white" alt="WebSockets" />
-</p>
-
-#### Infrastructure & DevOps
-<p align="left">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/AWS_EC2-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS EC2" />
-  <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-</p>
-
-<br />
-
-<div align="center">
-
-  <!-- 03 CS & Process Terminal Card -->
-  <img src="./assets/03_cs_and_processes.svg" alt="macOS Terminal CS Core & Processes" width="100%" />
-
-  <br /><br />
-
-  <!-- 04 Contact Terminal Card -->
-  <img src="./assets/04_contact_terminal.svg" alt="macOS Terminal Contact API" width="100%" />
-
-  <br /><br />
-  <sub>Built with terminal precision · Harish Sivakumar</sub>
-
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg" />
+  <img src="./assets/footer-light.svg" alt="End of log. Consumer lag: 0." width="100%" />
+</picture>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 270" role="img" aria-label="Harish Sivakumar. Backend developer building event-driven systems. Events flow from producers through a log to consumers.">
+<style>
+  .name { font: 700 44px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; letter-spacing: -0.5px; }
+  .tag { font: 400 15px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #8B949E; }
+  .label { font: 400 12px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #8B949E; }
+  .packet { opacity: 0; animation: travel 3s linear infinite; }
+  @keyframes travel {
+    0% { offset-distance: 0%; opacity: 0; }
+    6% { opacity: 1; }
+    30% { offset-distance: 100%; opacity: 1; }
+    33%, 100% { offset-distance: 100%; opacity: 0; }
+  }
+  .cell { fill: #161B22; animation: commit 9s linear infinite; }
+  @keyframes commit {
+    0%, 2% { fill: #161B22; }
+    4%, 12% { fill: #2DD4BF; }
+    22%, 100% { fill: #161B22; }
+  }
+  
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; }
+  .packet { display: none; }
+}
+</style>
+<text x="40" y="66" class="name">Harish Sivakumar</text>
+<text x="42" y="98" class="tag">backend developer / event-driven systems / java + spring boot + kafka</text>
+<path d="M170 172 C230 172 240 200 310 200" fill="none" stroke="#30363D" stroke-width="1.5"/>
+<path d="M170 228 C230 228 240 200 310 200" fill="none" stroke="#30363D" stroke-width="1.5"/>
+<path d="M590 200 C660 200 670 172 730 172" fill="none" stroke="#30363D" stroke-width="1.5"/>
+<path d="M590 200 C660 200 670 228 730 228" fill="none" stroke="#30363D" stroke-width="1.5"/>
+
+    <rect x="40" y="153" width="130" height="38" rx="6" fill="#161B22" stroke="#30363D"/>
+    <text x="105" y="176" text-anchor="middle" class="label">POST /tickets</text>
+    <rect x="40" y="209" width="130" height="38" rx="6" fill="#161B22" stroke="#30363D"/>
+    <text x="105" y="232" text-anchor="middle" class="label">auth.service</text>
+
+    <rect x="730" y="153" width="130" height="38" rx="6" fill="#161B22" stroke="#30363D"/>
+    <text x="795" y="176" text-anchor="middle" class="label">notify.service</text>
+    <rect x="730" y="209" width="130" height="38" rx="6" fill="#161B22" stroke="#30363D"/>
+    <text x="795" y="232" text-anchor="middle" class="label">search.index</text>
+<rect class="cell" x="310" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:0.0s"/>
+<rect class="cell" x="338" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:0.9s"/>
+<rect class="cell" x="366" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:1.8s"/>
+<rect class="cell" x="394" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:2.7s"/>
+<rect class="cell" x="422" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:3.6s"/>
+<rect class="cell" x="450" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:4.5s"/>
+<rect class="cell" x="478" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:5.4s"/>
+<rect class="cell" x="506" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:6.3s"/>
+<rect class="cell" x="534" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:7.2s"/>
+<rect class="cell" x="562" y="183" width="24" height="34" rx="3" stroke="#30363D" style="animation-delay:8.1s"/>
+<text x="450" y="166" text-anchor="middle" class="label">topic: profile.events</text>
+<text x="450" y="240" text-anchor="middle" class="label">partition 0 / append-only</text>
+<circle class="packet" r="4" fill="#F5A524" style="offset-path:path('M170 172 C230 172 240 200 310 200');animation-delay:0s"/><circle class="packet" r="4" fill="#F5A524" style="offset-path:path('M170 228 C230 228 240 200 310 200');animation-delay:1.5s"/><circle class="packet" r="4" fill="#F5A524" style="offset-path:path('M590 200 C660 200 670 172 730 172');animation-delay:0.75s"/><circle class="packet" r="4" fill="#F5A524" style="offset-path:path('M590 200 C660 200 670 228 730 228');animation-delay:2.25s"/>
+</svg>

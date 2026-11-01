@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 70" role="img" aria-label="End of log. Consumer caught up, lag zero.">
+<style>
+  .end { font: 400 13px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #57606A; }
+  .run { stroke-dasharray: 6 10; animation: flow 3s linear infinite; }
+  @keyframes flow { to { stroke-dashoffset: -64; } }
+  .dot { animation: blink 3s ease-in-out infinite; }
+  @keyframes blink { 50% { opacity: 0.25; } }
+  
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; }
+  .packet { display: none; }
+}
+</style>
+<line class="run" x1="4" y1="20" x2="896" y2="20" stroke="#0F766E" stroke-width="2"/>
+<circle class="dot" cx="306" cy="50" r="4" fill="#B45309"/>
+<text x="320" y="55" class="end">end of log / consumer lag: 0</text>
+</svg>
