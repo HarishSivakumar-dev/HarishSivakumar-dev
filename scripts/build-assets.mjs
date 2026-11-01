@@ -13,9 +13,12 @@ const SPRING = 'https://spring.io/img/projects';
 const SIMPLE = 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons';
 const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons';
 
-// Item kinds: `skill` is a ready-made skillicons tile; `url` is a logo placed on a matching
-// tile (`fill` tints monochrome logos); `glyph` is drawn here for the things with no official
-// logo, and carries a caption because a generic symbol can't identify itself.
+const ICONIFY = 'https://api.iconify.design';
+const onTile = (mode) => (mode === 'dark' ? '#FFFFFF' : '#000000');
+
+// Item kinds: `skill` is a ready-made skillicons tile (`badge` marks it as a variant); `url` is
+// a logo placed on a matching tile (`paint` recolours it). pgvector, RAG and RBAC have no
+// official logo, so they use a badged Postgres tile and generic Tabler symbols.
 const STACK = [
   {
     lane: 'core',
@@ -34,19 +37,23 @@ const STACK = [
       { name: 'Redis', skill: 'redis' },
       { name: 'PostgreSQL', skill: 'postgres' },
       { name: 'MySQL', skill: 'mysql' },
-      { name: 'pgvector', glyph: 'vector', caption: 'pgvector' },
-      { name: 'WebSockets', glyph: 'duplex', caption: 'ws' },
+      { name: 'pgvector', skill: 'postgres', badge: true },
+      {
+        name: 'WebSockets',
+        url: `${ICONIFY}/logos/websocket.svg`,
+        paint: (svg, mode) => svg.replace('#231f20', onTile(mode)),
+      },
     ],
   },
   {
     lane: 'ai + auth',
     items: [
       { name: 'Spring AI', url: `${SPRING}/spring-ai.svg` },
-      { name: 'Gemini', url: `${SIMPLE}/googlegemini.svg`, fill: () => '#8E75B2' },
-      { name: 'RAG', glyph: 'retrieve', caption: 'RAG' },
+      { name: 'Gemini', url: `${SIMPLE}/googlegemini.svg`, paint: (svg) => svg.replace('<svg', '<svg fill="#8E75B2"') },
+      { name: 'RAG', url: `${ICONIFY}/tabler/file-search.svg`, paint: (svg, _, t) => svg.replaceAll('currentColor', t.stream) },
       { name: 'OAuth2', url: `${DEVICON}/oauth/oauth-original.svg` },
-      { name: 'JWT', url: `${SIMPLE}/jsonwebtokens.svg`, fill: (mode) => (mode === 'dark' ? '#FFFFFF' : '#000000') },
-      { name: 'RBAC', glyph: 'roles', caption: 'RBAC' },
+      { name: 'JWT', url: `${SIMPLE}/jsonwebtokens.svg`, paint: (svg, mode) => svg.replace('<svg', `<svg fill="${onTile(mode)}"`) },
+      { name: 'RBAC', url: `${ICONIFY}/tabler/user-shield.svg`, paint: (svg, _, t) => svg.replaceAll('currentColor', t.stream) },
     ],
   },
   {
@@ -63,13 +70,6 @@ const STACK = [
 
 // Same tile colours as skillicons, so custom tiles sit flush beside its icons.
 const TILE = { dark: '#242938', light: '#F4F2ED' };
-
-const GLYPHS = {
-  vector: '<path d="M14 31V13M14 31H34M14 31L30 15M30 15h-6M30 15v6"/>',
-  duplex: '<path d="M12 17H36M31 12l5 5-5 5M36 27H12M17 22l-5 5 5 5"/>',
-  retrieve: '<path d="M13 10h13l5 5v7M26 10v5h5M13 10v23h9"/><circle cx="29" cy="28" r="5"/><path d="M33 32l4 4"/>',
-  roles: '<circle cx="24" cy="15" r="5"/><path d="M14 33c0-6 4-10 10-10s10 4 10 10"/>',
-};
 
 async function fetchText(url) {
   for (let attempt = 1; ; attempt++) {
@@ -90,14 +90,15 @@ async function tile(item, x, y, t, mode, delay) {
   const open = `<g class="node" style="animation-delay:${delay}s" transform-origin="${x} ${y}">`;
   if (item.skill) {
     const href = dataUri(await fetchText(`https://skillicons.dev/icons?i=${item.skill}&theme=${mode}`));
-    return `${open}<image href="${href}" x="${x}" y="${y}" width="48" height="48"/></g>\n`;
+    // Arrow badge: the Postgres tile with this mark stands for pgvector.
+    const badge = item.badge
+      ? `<circle cx="${x + 39}" cy="${y + 39}" r="10" fill="${t.stream}" stroke="${TILE[mode]}" stroke-width="2"/><path d="M${x + 35} ${y + 43}l8-8m-5 0h5v5" fill="none" stroke="${TILE[mode]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`
+      : '';
+    return `${open}<image href="${href}" x="${x}" y="${y}" width="48" height="48"/>${badge}</g>\n`;
   }
   const base = `<rect x="${x}" y="${y}" width="48" height="48" rx="11" fill="${TILE[mode]}"/>`;
-  if (item.glyph) {
-    return `${open}${base}<g transform="translate(${x} ${y})" fill="none" stroke="${t.stream}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform-origin="0 0"><g transform="translate(6.5 0) scale(0.73)">${GLYPHS[item.glyph]}</g></g><text x="${x + 24}" y="${y + 43}" text-anchor="middle" class="cap">${esc(item.caption)}</text></g>\n`;
-  }
   let svg = await fetchText(item.url);
-  if (item.fill) svg = svg.replace('<svg', `<svg fill="${item.fill(mode)}"`);
+  if (item.paint) svg = item.paint(svg, mode, t);
   return `${open}${base}<image href="${dataUri(svg)}" x="${x + 8}" y="${y + 8}" width="32" height="32"/></g>\n`;
 }
 
@@ -183,7 +184,6 @@ async function stack(t, mode) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)}">
 <style>
   .lane { font: 600 13px ${MONO}; fill: ${t.muted}; }
-  .cap { font: 400 8.5px ${MONO}; fill: ${t.muted}; }
   .pulse { opacity: 0; animation: sweep ${CYCLE}s ease-in-out infinite; }
   @keyframes sweep {
     0% { transform: translateX(0); opacity: 0; }
@@ -220,7 +220,7 @@ async function nowPlaying(t, mode) {
       `<text class="title${i === 0 ? ' first' : ''}" x="108" y="53" style="animation-delay:${i * PER_TRACK}s">${esc(name)}</text>`
   ).join('');
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 112" role="img" aria-label="On repeat: Lana Del Rey. ${esc(TRACKS.join(', '))}. Opens on Spotify.">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 112" role="img" aria-label="On repeat: Lana Del Rey. ${esc(TRACKS.join(', '))}. Click to play.">
 <style>
   .kicker { font: 600 11px ${MONO}; fill: ${t.muted}; letter-spacing: 1px; }
   .title { font: 600 19px ${SANS}; fill: ${t.text}; opacity: 0; animation: track ${TRACKS.length * PER_TRACK}s linear infinite; }
@@ -236,6 +236,7 @@ async function nowPlaying(t, mode) {
 <rect x="0.5" y="0.5" width="899" height="111" rx="8" fill="${t.surface}" stroke="${t.border}"/>
 <image href="${dataUri(logo)}" x="28" y="28" width="56" height="56"/>
 <text x="108" y="28" class="kicker">ON REPEAT</text>
+<text x="868" y="24" text-anchor="end" class="kicker" style="fill:${GREEN}">CLICK TO PLAY</text>
 ${titles}
 <text x="108" y="73" class="artist">Lana Del Rey</text>
 <rect x="108" y="86" width="670" height="3" rx="1.5" fill="${t.border}"/>
@@ -250,7 +251,7 @@ function footer(t) {
   const right = 'M840 26H450';
   const drop = (d, delay) =>
     `<circle class="packet" r="3" fill="${t.signal}" style="offset-path:path('${d}');animation-delay:${delay}s"/>`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 84" role="img" aria-label="End of log. Thanks for reading.">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 84" role="img" aria-label="End of logs">
 <style>
   .end { font: 400 12.5px ${MONO}; fill: ${t.muted}; }
   .packet { opacity: 0; animation: drain 5s ease-in infinite; }
@@ -277,7 +278,7 @@ function footer(t) {
 ${drop(left, 0)}${drop(right, 0)}
 <circle class="halo" cx="450" cy="26" r="7" fill="none" stroke="${t.stream}" stroke-width="1.5"/>
 <circle cx="450" cy="26" r="5" fill="${t.stream}"/>
-<text x="450" y="66" text-anchor="middle" class="end">end of log / thanks for reading</text>
+<text x="450" y="66" text-anchor="middle" class="end">End of logs</text>
 </svg>`;
 }
 

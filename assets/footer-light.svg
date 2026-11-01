@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 84" role="img" aria-label="End of log. Thanks for reading.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 84" role="img" aria-label="End of logs">
 <style>
   .end { font: 400 12.5px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #57606A; }
   .packet { opacity: 0; animation: drain 5s ease-in infinite; }
@@ -29,5 +29,5 @@
 <circle class="packet" r="3" fill="#B45309" style="offset-path:path('M60 26H450');animation-delay:0s"/><circle class="packet" r="3" fill="#B45309" style="offset-path:path('M840 26H450');animation-delay:0s"/>
 <circle class="halo" cx="450" cy="26" r="7" fill="none" stroke="#0F766E" stroke-width="1.5"/>
 <circle cx="450" cy="26" r="5" fill="#0F766E"/>
-<text x="450" y="66" text-anchor="middle" class="end">end of log / thanks for reading</text>
+<text x="450" y="66" text-anchor="middle" class="end">End of logs</text>
 </svg>

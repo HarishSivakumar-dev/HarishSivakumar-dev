@@ -84,10 +84,10 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
 
 ## Currently listening
 
-<a href="https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"><picture>
+<a href="https://harishsivakumar-dev.github.io/HarishSivakumar-dev/"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/now-playing-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/now-playing-light.svg" />
-  <img src="./assets/now-playing-light.svg" alt="On repeat: Lana Del Rey. Video Games, Summertime Sadness, Young and Beautiful, West Coast, Cinnamon Girl. Opens on Spotify." width="100%" />
+  <img src="./assets/now-playing-light.svg" alt="On repeat: Lana Del Rey. Video Games, Summertime Sadness, Young and Beautiful, West Coast, Cinnamon Girl. Click to open the player." width="100%" />
 </picture></a>
 
 ## Connect
@@ -99,5 +99,5 @@ Based in Salem, Tamil Nadu. Open to backend and distributed systems roles.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg" />
-  <img src="./assets/footer-light.svg" alt="End of log. Thanks for reading." width="100%" />
+  <img src="./assets/footer-light.svg" alt="End of logs" width="100%" />
 </picture>
