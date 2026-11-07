@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" width="440" height="200" role="img" aria-label="Activity: 1269 contributions, 12 mo, 1234 commits, 12 mo, 10 pull requests, 12 mo, 2 stars across 15 repos">
+<style>
+  .h { font: 600 15px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+  .p { font: 400 13px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #8B949E; }
+  .m { font: 400 12px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #8B949E; }
+  .num { font: 600 26px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+</style>
+<rect x="0.5" y="0.5" width="439" height="199" rx="8" fill="#161B22" stroke="#30363D"/>
+<text x="20" y="34" class="h">Activity</text>
+<text x="20" y="80" class="num">1269</text><text x="20" y="100" class="m">contributions, 12 mo</text>
+<text x="225" y="80" class="num">1234</text><text x="225" y="100" class="m">commits, 12 mo</text>
+<text x="20" y="148" class="num">10</text><text x="20" y="168" class="m">pull requests, 12 mo</text>
+<text x="225" y="148" class="num">2</text><text x="225" y="168" class="m">stars across 15 repos</text></svg>

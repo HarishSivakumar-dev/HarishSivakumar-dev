@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 100" width="900" height="100" role="img" aria-label="Streaks: 2 current streak (days), 19 longest streak, 12 mo, 189 active days, 12 mo">
+<style>
+  .h { font: 600 15px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #1F2328; }
+  .p { font: 400 13px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #57606A; }
+  .m { font: 400 12px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #57606A; }
+  .num { font: 600 26px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #1F2328; }
+</style>
+<rect x="0.5" y="0.5" width="899" height="99" rx="8" fill="#F6F8FA" stroke="#D0D7DE"/>
+<text x="150" y="50" text-anchor="middle" class="num" style="fill:#B45309">2</text><text x="150" y="74" text-anchor="middle" class="m">current streak (days)</text>
+<text x="450" y="50" text-anchor="middle" class="num">19</text><text x="450" y="74" text-anchor="middle" class="m">longest streak, 12 mo</text>
+<text x="750" y="50" text-anchor="middle" class="num">189</text><text x="750" y="74" text-anchor="middle" class="m">active days, 12 mo</text></svg>

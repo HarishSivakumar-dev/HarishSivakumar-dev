@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 142" width="440" height="142" role="img" aria-label="SkillSprint: Corporate learning platform modelling real org hierarchies, mentorship and approvals.">
+<style>
+  .h { font: 600 15px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+  .p { font: 400 13px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #8B949E; }
+  .m { font: 400 12px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #8B949E; }
+  .num { font: 600 26px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+</style>
+<rect x="0.5" y="0.5" width="439" height="141" rx="8" fill="#161B22" stroke="#30363D"/>
+<rect x="20" y="22" width="4" height="16" rx="2" fill="#F5A524"/>
+<text x="32" y="35" class="h">SkillSprint</text>
+<text x="20" y="62" class="p">Corporate learning platform modelling real org</text>
+<text x="20" y="81" class="p">hierarchies, mentorship and approvals.</text>
+<text x="20" y="122" class="m">Spring Boot / RBAC</text></svg>
