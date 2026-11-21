@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" width="440" height="200" role="img" aria-label="Languages: Java 71.3%, JavaScript 15.3%, CSS 8.3%, HTML 3.6%, Other 1.5%">
+<style>
+  .h { font: 600 15px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+  .p { font: 400 13px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #8B949E; }
+  .m { font: 400 12px ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; fill: #8B949E; }
+  .num { font: 600 26px -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+</style>
+<rect x="0.5" y="0.5" width="439" height="199" rx="8" fill="#161B22" stroke="#30363D"/>
+<text x="20" y="34" class="h">Languages</text>
+<clipPath id="b"><rect x="20" y="50" width="400" height="8" rx="4"/></clipPath>
+<g clip-path="url(#b)"><rect x="20.0" y="50" width="285.4" height="8" fill="#F5A524"/><rect x="305.4" y="50" width="61.2" height="8" fill="#2DD4BF"/><rect x="366.5" y="50" width="33.3" height="8" fill="#7AA2F7"/><rect x="399.9" y="50" width="14.2" height="8" fill="#C4A7E7"/><rect x="414.1" y="50" width="5.9" height="8" fill="#8B949E"/></g>
+<rect x="20" y="75" width="10" height="10" rx="2" fill="#F5A524"/><text x="38" y="84" class="p">Java</text><text x="420" y="84" text-anchor="end" class="m">71.3%</text>
+<rect x="20" y="97" width="10" height="10" rx="2" fill="#2DD4BF"/><text x="38" y="106" class="p">JavaScript</text><text x="420" y="106" text-anchor="end" class="m">15.3%</text>
+<rect x="20" y="119" width="10" height="10" rx="2" fill="#7AA2F7"/><text x="38" y="128" class="p">CSS</text><text x="420" y="128" text-anchor="end" class="m">8.3%</text>
+<rect x="20" y="141" width="10" height="10" rx="2" fill="#C4A7E7"/><text x="38" y="150" class="p">HTML</text><text x="420" y="150" text-anchor="end" class="m">3.6%</text>
+<rect x="20" y="163" width="10" height="10" rx="2" fill="#8B949E"/><text x="38" y="172" class="p">Other</text><text x="420" y="172" text-anchor="end" class="m">1.5%</text></svg>
